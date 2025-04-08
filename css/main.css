@@ -17,6 +17,7 @@ body {
    color: #222;
    font-family: 'KoPubDotum', 'Noto Sans KR', 'MalgunGothic', 'AppleSDGothic', sans-serif;
 }
+
 h2 {
    font-family: "KoPubDotum";
    font-weight: 600;
@@ -205,11 +206,13 @@ header .scroll h1 a {
    overflow: hidden;
    position: relative;
 }
+.recommend_wrap .txt_con {
+   margin-bottom: 9rem;
+}
 .recommend_wrap dl {
    display: flex;
    flex-direction: column;
    justify-content: space-around;
-   margin-top: 9rem;
    gap: 4.7rem;
    color: #FFF;
 }
@@ -266,7 +269,7 @@ header .scroll h1 a {
    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 .recommend_wrap dl.on {
-   opacity: 1;
+   opacity: 3;
    transform: translateY(0);
 }
 .recommend_wrap .chat_scroll_area {
@@ -426,11 +429,11 @@ header .scroll h1 a {
    height: 57.6rem;
 }
 .reason_wrap .bg_purple {
-   background: url(./img/bg_purple.png) no-repeat;
+   background: url(../img/bg_purple.png) no-repeat;
    background-size: cover;
 }
 .reason_wrap .bg_orange {   
-   background: url(./img/bg_orange.png) no-repeat;
+   background: url(../img/bg_orange.png) no-repeat;
    background-size: cover;
 }
 .reason_wrap .txt {
@@ -969,7 +972,7 @@ table {
    display: flex;
    gap: 3.2rem;
    background: #FFF;
-   padding: 5rem 4rem;
+   padding: 5rem 7rem 5rem 4rem;
    border: 1px solid #C1BECC;
    border-radius: 3rem;
 }
@@ -990,8 +993,8 @@ table {
    margin-left: 1rem;
 }
 .review .review_swiper li p {
-   font-size: 2.2rem;
-   line-height: 3.5rem;
+   font-size: 1.8rem;
+   line-height: 3rem;
 }
 .review .review_swiper .thumb_img img {
    display: flex;

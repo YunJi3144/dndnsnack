@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
            // 순차 등장 효과
            setTimeout(() => {
               entry.target.classList.add('on');
-           }, index * 300); // 0.3초 간격으로 하나씩 등장
+           }, index * 500); // 0.3초 간격으로 하나씩 등장
            observer.unobserve(entry.target); // 한 번만 등장하도록
         }
      });
@@ -77,6 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
 /* 고객사 후기 */
 const ReviewSwiper = new Swiper('.review_swiper', {
   // autoplay: true, //자동실행
@@ -85,7 +86,7 @@ const ReviewSwiper = new Swiper('.review_swiper', {
   },
   speed: 10000, //애니메이션 지속시간
   loop: true, //무한반복
-  slidesPerView: '2.65', //화면에 보여질 슬라이드 갯수
+  slidesPerView: '2.7', //화면에 보여질 슬라이드 갯수
   spaceBetween: 50, //슬라이드 사이 간격
 });
 

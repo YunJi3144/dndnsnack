@@ -115,7 +115,7 @@ header h1 a {
    display: block;
    height: 3.8rem;
    width: 13.1rem;
-   background: url(./img/dndnlogo_header.svg) no-repeat;
+   background: url(../img/dndnlogo_header.svg) no-repeat;
    background-position: left top;
    transition: background-position 0.3s;
 }

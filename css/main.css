@@ -114,7 +114,7 @@ header h1 a {
    display: block;
    height: 3.8rem;
    width: 13.1rem;
-   background: url(/img/dndnlogo_header.svg) no-repeat;
+   background: url(./img/dndnlogo_header.svg) no-repeat;
    background-position: left top;
    transition: background-position 0.3s;
 }
@@ -232,7 +232,7 @@ header .scroll h1 a {
    width: 8rem;
    height: 8rem;
    background: #8600C7;
-   background-image: url(/img/user.png) no-repeat;
+   background-image: url(./img/user.png) no-repeat;
    background-size: cover;
    background-position: center;
    padding: 2rem;
@@ -254,7 +254,7 @@ header .scroll h1 a {
    width: 9rem;
    height: 9rem;
    background: var(--main-orange);
-   background-image: url(/img/dndn_symbol.png) no-repeat;
+   background-image: url(./img/dndn_symbol.png) no-repeat;
    background-size: contain;
    background-position: center;
    padding: 2rem;
@@ -426,11 +426,11 @@ header .scroll h1 a {
    height: 57.6rem;
 }
 .reason_wrap .bg_purple {
-   background: url(/img/bg_purple.png) no-repeat;
+   background: url(./img/bg_purple.png) no-repeat;
    background-size: cover;
 }
 .reason_wrap .bg_orange {   
-   background: url(/img/bg_orange.png) no-repeat;
+   background: url(./img/bg_orange.png) no-repeat;
    background-size: cover;
 }
 .reason_wrap .txt {

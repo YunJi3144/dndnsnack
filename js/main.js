@@ -1,26 +1,27 @@
 
 /* 든든스낵이 추천 */
-document.addEventListener('DOMContentLoaded', () => {
-  const items = document.querySelectorAll('.recommend_wrap dl');
+// document.addEventListener('DOMContentLoaded', () => {
+//   const items = document.querySelectorAll('.recommend_wrap dl');
 
-  const observer = new IntersectionObserver((entries, observer) => {
-     entries.forEach((entry, index) => {
-        if (entry.isIntersecting) {
-           // 순차 등장 효과
-           setTimeout(() => {
-              entry.target.classList.add('on');
-           }, index * 500); // 0.3초 간격으로 하나씩 등장
-           observer.unobserve(entry.target); // 한 번만 등장하도록
-        }
-     });
-  }, {
-     threshold: 0.2
-  });
+//   const observer = new IntersectionObserver((entries, observer) => {
+//      entries.forEach((entry, index) => {
+//         if (entry.isIntersecting) {
+//            // 순차 등장 효과
+//            setTimeout(() => {
+//               entry.target.classList.add('on');
+//            }, index * 500); // 0.3초 간격으로 하나씩 등장
+//            observer.unobserve(entry.target); // 한 번만 등장하도록
+//         }
+//      });
+//   }, {
+//      threshold: 0.2
+//   });
 
-  items.forEach(item => {
-     observer.observe(item);
-  });
-});
+//   items.forEach(item => {
+//      observer.observe(item);
+//   });
+// });
+
 
 
 /* reason_swiper */

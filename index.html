@@ -45,10 +45,11 @@
          <div class="main_visual_swiper">
             <div class="swiper-wrapper">
                <div class="swiper-slide">
-                  <img src="./img/main_banner.jpg" alt="사내 간식 복지 서비스 든든스낵 이미지">
+                  <img class="pc" src="./img/main_banner.jpg" alt="사내 간식 복지 서비스 든든스낵 이미지">
+                  <!-- <img class="mo" src="./img/main_banner_mo.png.jpg" alt="사내 간식 복지 서비스 든든스낵 이미지"> -->
                </div>
-               <div class="swiper-slide"><img src="./img/main_banner1.jpg" alt="사내 간식 복지 서비스 든든스낵 이미지"></div>
-               <div class="swiper-slide"><img src="./img/main_banner2.jpg" alt="사내 간식 복지 서비스 든든스낵 이미지"></div>
+               <div class="swiper-slide"><img class="pc" src="./img/main_banner1.jpg" alt="사내 간식 복지 서비스 든든스낵 이미지"></div>
+               <div class="swiper-slide"><img class="pc" src="./img/main_banner2.jpg" alt="사내 간식 복지 서비스 든든스낵 이미지"></div>
             </div>
             <!-- 디자인 해보고 코딩 -->
             <div class="swiper-button-prev"></div>
@@ -63,38 +64,66 @@
                <h2>우리 회사에 딱 맞는 사내 간식 복지 서비스<br>찾고 계신가요?</h2>
             </div>
             <div class="chat_scroll_area">
-               <dl>
-                  <dt>
-                     <span class="circle_cust">
-                        <img src="./img/user.png" alt="상대 프로필">
-                     </span>
-                     <span class="chat_box">모두가 만족할 간식 고르기가 너무 어려워요ㅜㅜ</span>
-                  </dt>
-                  <dd>
-                     <span class="circle_cust"><img src="./img/dndn_symbol.svg" alt="든든스낵 로고"></span>
-                     <span class="chat_box">든든스낵이 맞춤 큐레이션 해드려요!</span>
-                  </dd>
-               </dl>
-               <dl>
-                  <dt>
-                     <span class="circle_cust"><img src="./img/user.png" alt="상대 프로필"></span> 
-                     <span class="chat_box">간식이 너무 빨리 떨어져요..</span>
-                  </dt>
-                  <dd>
-                     <span class="circle_cust"><img src="./img/dndn_symbol.svg" alt="든든스낵 로고"></span>
-                     <span class="chat_box">배송부터 진열, 정기적인 관리까지 한번에!</span>
-                  </dd>
-               </dl>
-               <dl>
-                  <dt>
-                     <span class="circle_cust"><img src="./img/user.png" alt="상대 프로필"></span> 
-                     <span class="chat_box">이번 달 지출이 얼마였는지 알고 싶어요.</span>
-                  </dt>
-                  <dd>
-                     <span class="circle_cust"><img src="./img/dndn_symbol.svg" alt="든든스낵 로고"></span>
-                     <span class="chat_box">회계부터 정산까지 맡겨주세요!</span>
-                  </dd>
-               </dl>
+               <div class="chat_group">
+                  <dl class="chat">
+                     <dt>
+                        <span class="circle_cust">
+                           <div class="cust">
+                              <img src="./img/user.png" alt="상대 프로필">
+                           </div>
+                        </span>
+                        <span class="chat_box">모두가 만족할 간식 고르기가 너무 어려워요ㅜㅜ</span>
+                     </dt>
+                     <dd>
+                        <span class="circle_cust">
+                           <div class="dndn">
+                              <img src="./img/dndn_symbol.svg" alt="든든스낵 로고">
+                           </div>
+                        </span>
+                        <span class="chat_box">든든스낵이 맞춤 큐레이션 해드려요!</span>
+                     </dd>
+                  </dl>
+               </div>
+               <div class="chat_group">
+                  <dl class="chat">
+                     <dt>
+                        <span class="circle_cust">
+                           <div class="cust">
+                              <img src="./img/user.png" alt="상대 프로필">
+                           </div>
+                        </span> 
+                        <span class="chat_box">간식이 너무 빨리 떨어져요..</span>
+                     </dt>
+                     <dd>
+                        <span class="circle_cust">
+                           <div class="dndn">
+                              <img src="./img/dndn_symbol.svg" alt="든든스낵 로고">
+                           </div>
+                        </span>
+                        <span class="chat_box">배송부터 진열, 정기적인 관리까지 한번에!</span>
+                     </dd>
+                  </dl>  
+               </div> 
+               <div class="chat_group">
+                  <dl class="chat">
+                     <dt>
+                        <span class="circle_cust">
+                           <div class="cust">
+                              <img src="./img/user.png" alt="상대 프로필">
+                           </div>
+                        </span> 
+                        <span class="chat_box">이번 달 지출이 얼마였는지 알고 싶어요.</span>
+                     </dt>
+                     <dd>
+                        <span class="circle_cust">
+                           <div class="dndn">
+                              <img src="./img/dndn_symbol.svg" alt="든든스낵 로고">
+                           </div>
+                        </span>
+                        <span class="chat_box">회계부터 정산까지 맡겨주세요!</span>
+                     </dd>
+                  </dl>
+               </div>
             </div>
             <!-- 말 줄임표시 => 가상요소-->
          </section>

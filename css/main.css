@@ -62,6 +62,13 @@ section {
       font-size: 2rem;
    }
 }
+
+@media screen and (max-width: 780px) {
+   .container {
+      padding: 0 5rem;
+   }
+}
+
 @media screen and (max-width: 500px) {
    h2 {
    }
@@ -126,18 +133,18 @@ header h1 a {
 }
 #gnb ul {
    display: flex;
-   gap: 13.3rem;
+   gap: 13rem;
    flex-direction: row;
    justify-content: center;
    margin: 2.5rem;
+   font-size: 1.6rem;
 }
 #gnb>li>a {
    display: flex;
    align-items: center;
-   font-size: 2rem;
-   font-weight: 400;
 }
 #gnb li:hover>a {
+   font-weight: 600;
    color: var(--main-orange);
 }
 .header_util {
@@ -199,6 +206,12 @@ header .scroll h1 a {
    object-fit: cover;
 }
 
+@media screen and (max-width: 780px) {
+   [class^="pc"] {display: none;}
+   [class^="mo"] {display: block;}
+   }
+}
+
 
 /* recommend_wrap */
 .recommend_wrap {
@@ -215,6 +228,7 @@ header .scroll h1 a {
    justify-content: space-around;
    gap: 4.7rem;
    color: #FFF;
+   margin: 4.7rem;
 }
 .recommend_wrap dl>dt {
    display: flex;
@@ -231,15 +245,16 @@ header .scroll h1 a {
    gap: 2.3rem;
    padding: 0 40.7rem;
 }
-.recommend_wrap dl>dt span img {
+.recommend_wrap dl>dt .circle_cust {
    width: 8rem;
    height: 8rem;
    background: #8600C7;
-   background-image: url(./img/user.png) no-repeat;
-   background-size: cover;
-   background-position: center;
-   padding: 2rem;
    border-radius: 50%;
+}
+.recommend_wrap dl>dt span .cust {
+   background-size: contain;
+   background-position: center;
+   padding: 1.8rem 2rem;
 }
 .recommend_wrap dl>dt .chat_box {
    padding: 2.5rem 4rem;
@@ -253,22 +268,24 @@ header .scroll h1 a {
    border-radius: 45px 0 45px 45px ;
    font-size: 3.4rem;
 }
-.recommend_wrap dl>dd span img {
+.recommend_wrap dl>dd .circle_cust {
    width: 9rem;
    height: 9rem;
    background: var(--main-orange);
-   background-image: url(./img/dndn_symbol.png) no-repeat;
-   background-size: contain;
-   background-position: center;
-   padding: 2rem;
    border-radius: 50%;
 }
-.recommend_wrap dl {
+.recommend_wrap dl>dd span .dndn img {
+   background-size: contain;
+   background-position: center;
+   padding: 1.5rem 2rem;
+}
+/* .recommend_wrap {
    opacity: 0;
    transform: translateY(60px);
    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-.recommend_wrap dl.on {
+} */
+
+/*.recommend_wrap dl.on {
    opacity: 3;
    transform: translateY(0);
 }
@@ -280,20 +297,52 @@ header .scroll h1 a {
    gap: 4.7rem;
    scroll-behavior: smooth;
    padding-right: 1rem;
+} */
+
+
+@media screen and (max-width: 1600px) {
+   
 }
 
-
 @media screen and (max-width: 1280px) {
+   .recommend_wrap dl {
+      gap: 3.5rem;
+      margin-bottom: 3.5rem;
+   }
    .recommend_wrap dl>dt {
-      padding: 0 16.5rem;
+      padding: 0 17rem;
    }
    .recommend_wrap dl>dd {
-      padding: 0 16.5rem;
+      padding: 0 17rem;
    }
+   .recommend_wrap dl>dt .chat_box {
+      padding: 1.9rem 3rem;
+      font-size: 2.4rem;
+   }
+   .recommend_wrap dl>dd .chat_box {
+      padding: 2rem 3.5rem;
+      font-size: 3rem;
+   }
+   .recommend_wrap dl>dt .circle_cust {
+      width: 6.5rem;
+      height: 6.5rem;
+   }
+   .recommend_wrap dl>dt span .cust {
+      padding: 1.5rem 1.7rem;
+   }
+   .recommend_wrap dl>dd .circle_cust {
+      width: 7rem;
+      height: 7rem;
+   }
+   .recommend_wrap dl>dd span .dndn img {
+      padding: 1.2rem 1.8rem;
+   }
+   
 }
 @media screen and (max-width: 1140px) {
    .recommend_wrap dl {
       gap: 2.5rem;
+      margin-bottom: 2.5rem;
    }
    .recommend_wrap dl>dt {
       padding: 0 14.5rem;
@@ -303,21 +352,25 @@ header .scroll h1 a {
    }
    .recommend_wrap dl>dt .chat_box {
       padding: 1.7rem 3.5rem;
-      font-size: 2rem;
+      font-size: 2.1rem;
    }
    .recommend_wrap dl>dd .chat_box {
       padding: 2rem 3.5rem;
       font-size: 2.5rem;
    }
-   .recommend_wrap dl>dt span img {
+   .recommend_wrap dl>dt .circle_cust {
       width: 6.5rem;
       height: 6.5rem;
-      padding: 1.5rem;
    }
-   .recommend_wrap dl>dd span img {
+   .recommend_wrap dl>dt span .cust {
+      padding: 1.6rem 1.8rem;
+   }
+   .recommend_wrap dl>dd .circle_cust {
       width: 7.5rem;
       height: 7.5rem;
-      padding: 1.5rem;
+   }
+   .recommend_wrap dl>dd span .dndn img {
+      padding: 1.2rem 1.8rem;
    }
 }
 
@@ -376,31 +429,54 @@ header .scroll h1 a {
       line-height: 3.3rem;
    }
 }
+
+@media screen and (max-width: 1600px) {
+   .container {
+      padding: 0 20rem;
+   }
+}
+@media screen and (max-width: 1437px) {
+   .container {
+      padding: 0 10rem;
+   }
+}
 @media screen and (max-width: 1280px) {
    .one_stop_care_service {
-      height: 80rem;
+      height: 70rem;
    }
    .one_stop_care_service li p {
       font-size: 2rem;
       line-height: 3rem;
    }
 }
-@media screen and (max-width: 1140px) {
-   .one_stop_care_service .service_img {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 5rem 4.3rem 3rem 5rem;
-      gap: 1.4rem 0;
-   }
-   .one_stop_care_service li p {
-      font-size: 1.7rem;
-      line-height: 2.5rem;
+@media screen and (max-width: 1164px) {
+   .container {
+      padding: 0 8rem;
    }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1124px) {
+   .one_stop_care_service .service_img {
+      padding: 5rem 4.3rem 3rem 5rem;
+   }
 }
 @media screen and (max-width: 780px) {
+   .container {
+      padding: 0 5rem;
+   }
+   .one_stop_care_service {
+      height: 55rem;
+   }
+   .one_stop_care_service .service_img {
+      padding: 4rem 3.3rem 3rem 4rem;
+   }
+   .one_stop_care_service li p {
+      font-size: 1.5rem;
+      line-height: 2.4rem;
+   }
+   .one_stop_care_service .sercive_box {
+      gap: 3rem;
+      margin-top: 5rem;
+   }
 }
 
 
@@ -524,6 +600,32 @@ header .scroll h1 a {
       transform: translateY(30%);
    }
 }
+@media screen and (max-width: 780px) {
+   .reason_wrap .bg_purple, .reason_wrap .bg_orange {
+      height: 33rem;
+      padding: 0 4rem;
+   }
+   .reason_wrap .txt strong {
+      font-size: 3.3rem;
+      font-weight: 600;
+      line-height: 4.3rem;
+   }
+   .reason_wrap .txt p {
+      font-size: 1.5rem;
+      line-height: 2.3rem;
+   }
+   .reason_wrap .bg_img {
+      padding: 3rem;
+      transform: translateY(20%);
+   }
+   .reason_wrap .swiper-button-prev {
+      left: -40px;
+   }
+   .reason_wrap .swiper-button-next {
+      right: -40px;
+   }
+}
+@media screen and (max-width: 480px) {}
 
 
 /* 우리 회사 맞춤 서비스 */
@@ -776,6 +878,27 @@ header .scroll h1 a {
       font-size: 2rem;
    }
 }
+@media screen and (max-width: 1024px) {
+   .product .tabs {
+      margin-top: 7.6rem;
+   }
+   .product .tabs a {
+      font-size: 2rem;
+   }
+   .product .cont_list {
+      margin-top: 4.2rem;
+   }
+   .product .cont_list ul>li img {
+      display: flex;
+      justify-content: center;
+      padding: 3rem 3rem 0 3rem;
+   }
+   .product .cont_list ul>li span {
+      text-align: center;
+      padding: 2.2rem 0 2.3rem 0;
+      font-size: 2rem;
+   }
+}
 
 
 /* 서비스 이용 프로세스 */
@@ -833,12 +956,39 @@ header .scroll h1 a {
    font-family: remixicon;
    margin-left: 1rem;
 }
-
+@media screen and (max-width: 1600px) {
+   .process ol {
+      margin-top: 5rem;
+   }
+   .process ol img {
+      padding: 5rem 4rem 0 5rem;
+   }
+   .process ol p {
+      text-align: center;
+      font-size: 2.3rem;
+      padding: 3rem;
+   }
+   .process ol>li {
+      gap: 2rem;
+   }
+   .process .step::after {
+      transform: translateY(-410%);
+      margin-left: 26.5rem;
+      font-size: 3.5rem;
+   }
+   .process .link_btn span {
+      margin: 6rem;
+      padding: 2rem;
+      font-size: 2rem;
+   }
+}
 @media screen and (max-width: 1140px) {
    .process ol {
       margin-top: 5rem;
    }
    .process ol img {
+      width: 20rem;
+      height: 18rem;
       padding: 4rem 3rem 0 3rem;
    }
    .process ol p {
@@ -850,8 +1000,8 @@ header .scroll h1 a {
       gap: 2rem;
    }
    .process .step::after {
-      transform: translateY(-400%);
-      margin-left: 21.5rem;
+      transform: translateY(-380%);
+      margin-left: 21rem;
       font-size: 3.5rem;
    }
    .process .link_btn span {
@@ -859,6 +1009,20 @@ header .scroll h1 a {
       padding: 2rem;
       font-size: 2rem;
    }
+}
+@media screen and (max-width: 780px) {
+   /* .process ol {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+   }
+   .process ol img {
+      padding: 2rem 3rem 0 2rem;
+      margin-left: 6.4rem;
+   }
+   .process .step::after {
+      display: none;
+   } */
 }
 
 
@@ -1102,9 +1266,9 @@ table {
    margin-bottom: 2rem;
 }
 .btn_txt p {
-   font-size: 2.4rem;
+   font-size: 2.2rem;
+   line-height: 3.2rem;
    margin-bottom: 3rem;
-   line-height: 3.3rem;
 }
 .link_2 {
    display: inline-block;
@@ -1127,7 +1291,7 @@ table {
 }
 .btn_bg02 .link_2:hover {
    background: #fff;
-   color: var(--main-purple);
+   color: #A639DB;
 }
 .btn_img {
    width: 20rem;

@@ -1,27 +1,66 @@
+/* Header */ 
+let lastScroll = 0;
+const header = document.querySelector("#header");
+
+window.addEventListener("scroll", () => {
+  const currentScroll = window.pageYOffset;
+
+  if (currentScroll > lastScroll && currentScroll > 50) {
+    // 스크롤 내림 → 헤더 숨김
+    header.classList.add("hide");
+  } else {
+    // 스크롤 올림 → 헤더 보임
+    header.classList.remove("hide");
+  }
+
+  lastScroll = currentScroll;
+});
+
 
 /* 든든스낵이 추천 */
-// document.addEventListener('DOMContentLoaded', () => {
-//   const items = document.querySelectorAll('.recommend_wrap dl');
+document.addEventListener("DOMContentLoaded", function () {
+  const chatGroups = document.querySelectorAll(".chat_group");
+  let currentIndex = 0;
+  let isLocked = true;
 
-//   const observer = new IntersectionObserver((entries, observer) => {
-//      entries.forEach((entry, index) => {
-//         if (entry.isIntersecting) {
-//            // 순차 등장 효과
-//            setTimeout(() => {
-//               entry.target.classList.add('on');
-//            }, index * 500); // 0.3초 간격으로 하나씩 등장
-//            observer.unobserve(entry.target); // 한 번만 등장하도록
-//         }
-//      });
-//   }, {
-//      threshold: 0.2
-//   });
+  function showGroup(index) {
+    chatGroups.forEach((group, i) => {
+      group.classList.remove("active");
+      if (i === index) {
+        group.classList.add("active");
+      }
+    });
+  }
 
-//   items.forEach(item => {
-//      observer.observe(item);
-//   });
-// });
+  showGroup(currentIndex);
 
+  const chatArea = document.querySelector(".chat_scroll_area");
+
+  chatArea.addEventListener("wheel", function (e) {
+    if (!isLocked) return; // 잠금 해제되면 무시
+
+    e.preventDefault();
+
+    if (e.deltaY > 0 && currentIndex < chatGroups.length - 1) {
+      currentIndex++;
+      showGroup(currentIndex);
+    } else if (e.deltaY < 0 && currentIndex > 0) {
+      currentIndex--;
+      showGroup(currentIndex);
+    }
+
+    // 마지막 채팅까지 본 경우 → 잠금 해제
+    if (currentIndex === chatGroups.length - 1) {
+      setTimeout(() => {
+        isLocked = false;
+        document.body.style.overflowY = "auto"; // 스크롤 해제
+      }, 300); // 자연스럽게 약간의 지연
+    }
+  }, { passive: false });
+
+  // 초기엔 스크롤 잠금
+  document.body.style.overflowY = "hidden";
+});
 
 
 /* reason_swiper */

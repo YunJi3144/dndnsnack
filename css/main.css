@@ -67,6 +67,14 @@ section {
    .container {
       padding: 0 5rem;
    }
+   h2 {
+      font-size: 3rem;
+      line-height: 4.3rem;
+      margin-top: 1.3rem;
+   }
+   .txt_con span {
+      font-size: 1.8rem;
+   }
 }
 
 @media screen and (max-width: 500px) {
@@ -111,6 +119,13 @@ header {
    z-index: 9000;
    color: #222;
    transform: all 0.3s;
+}
+#header {
+   transition: transform 0.3s ease;
+   will-change: transform;
+}
+#header.hide {
+   transform: translateY(-100%);
 }
 header h1 {
    position: absolute;
@@ -193,6 +208,21 @@ header .scroll h1 a {
    }
 }
 @media screen and (max-width: 1140px) {
+   .header_util {
+   }
+   #gnb {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+   }
+   #gnb ul {
+      display: flex;
+      gap: 13rem;
+      flex-direction: row;
+      justify-content: center;
+      margin: 2.5rem;
+      font-size: 1.6rem;
+   }
 }
 
 
@@ -209,7 +239,6 @@ header .scroll h1 a {
 @media screen and (max-width: 780px) {
    [class^="pc"] {display: none;}
    [class^="mo"] {display: block;}
-   }
 }
 
 
@@ -218,6 +247,7 @@ header .scroll h1 a {
    max-height: 80%;
    overflow: hidden;
    position: relative;
+   margin: 5rem 0;
 }
 .recommend_wrap .txt_con {
    margin-bottom: 9rem;
@@ -279,26 +309,31 @@ header .scroll h1 a {
    background-position: center;
    padding: 1.5rem 2rem;
 }
-/* .recommend_wrap {
-   opacity: 0;
-   transform: translateY(60px);
-   transition: opacity 0.8s ease, transform 0.8s ease;
-} */
-
-/*.recommend_wrap dl.on {
-   opacity: 3;
-   transform: translateY(0);
+.chat_scroll_area {
+   height: 230px; /* 원하는 높이 설정 */
+   overflow: hidden;
+   position: relative;
 }
-.recommend_wrap .chat_scroll_area {
-   max-height: 70rem;
-   overflow-y: auto;
+ 
+.chat_group {
+   height: 100%;
    display: flex;
    flex-direction: column;
-   gap: 4.7rem;
-   scroll-behavior: smooth;
-   padding-right: 1rem;
-} */
-
+   justify-content: center;
+   opacity: 0;
+   transform: translateY(20px);
+   transition: all 0.5s ease;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+}
+ 
+.chat_group.active {
+   opacity: 1;
+   transform: translateY(0);
+   position: relative;
+}
 
 @media screen and (max-width: 1600px) {
    
@@ -377,8 +412,8 @@ header .scroll h1 a {
 
 /* 원스탑 케어 서비스 */
 .one_stop_care_service {
+   height: 90vh;
    background: var(--sub-bg);
-   /* height: 90vh; */
 }
 .one_stop_care_service .sercive_box {
    display: flex;
@@ -601,6 +636,9 @@ header .scroll h1 a {
    }
 }
 @media screen and (max-width: 780px) {
+   .reason_wrap .txt {
+      gap: 2rem;
+   }
    .reason_wrap .bg_purple, .reason_wrap .bg_orange {
       height: 33rem;
       padding: 0 4rem;

@@ -276,6 +276,11 @@ header .scroll h1 a {
    color: silver
 }
 
+@media screen and (max-width: 1280px) {
+   .main_visual_swiper .main_swiper {
+   }
+}
+
 /* @media screen and (max-width: 780px) {
    [class^="pc"] {display: none;}
    [class^="mo"] {display: block;}

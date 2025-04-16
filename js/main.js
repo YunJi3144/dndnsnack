@@ -17,83 +17,68 @@ window.addEventListener("scroll", () => {
 });
 
 
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  });
+});
+
+
+
 /* 메인 배너 */
-// const MainVisualSwiper = new Swiper('.main_visual_swiper', {
-//   autoplay: true,
-//   loop: true,
-//   pagination: {
-//     el: '.swiper-pagination',
-//   },
-//   spaceBetween: 10,
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
-// });
+const btnPlayStop = document.querySelector('.btn-play-stop');
+const swiperElm = document.querySelector('#mainswiper');
+let isPlaying = true; // play와 stop을 토글하기 위한 변수
 
-
-const MainVisualSwiper = new Swiper('.main_visual_swiper', {
-  autoplay: true,
-  loop: true,
+const mainswiper = new Swiper('#mainswiper', {
   effect: "fade",
-  cardsEffect: {
-    perSlideOffset: 20, // Space between cards in px
-    perSlideRotate: 10, // Rotation of cards in degrees
+  fadeEffect: {
+    crossFade: true
+  },
+  loop: true,
+  autoplay: {
+    delay: 5000, // 슬라이드가 5초마다 자동으로 변경되도록 설정
+    disableOnInteraction: false // 사용자가 슬라이드 후에도 계속 자동 변경되도록
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'custom',
+    renderCustom: function (swiper, current, total) {
+      const progressWidth = (current / total) * 100; // 진행 상태를 비율로 계산
+      return `
+        <span class="num">${current}</span>
+        <div class="progress">
+          <div class="bar" style="width: ${progressWidth}%;"></div>
+        </div>
+        <span class="num">${total}</span>
+      `;
+    },
   },
   navigation: {
-    prevEl: ".kitchen_sect .doctor_list2 .prev",
-    nextEl: ".kitchen_sect .doctor_list2 .next",
-  },
-  resistanceRatio: 0.2,
-  touchRatio: 0.5,
-  observer: true,
-  observeParents: true,
-  })
+    nextEl: '.btn-next',
+    prevEl: '.btn-prev'
+  }
+});
 
-// const MainVisualSwiper = new Swiper('.main_visual_swiper', {
-//   effect: 'fade',
-//   autoplay: {
-//     delay: slideDuration
-//   },
-//   loop: true,
-//   pagination: {
-//     el: '.swiper-pagination',
-//     type: 'custom',
-//     renderCustom: function (swiper, current, total) {
-//       return `
-//         <span class="num">${current}</span>
-//         <div class="progress">
-//           <div class="bar"></div>
-//         </div>
-//         <span class="num">${total}</span>
-//       `
-//     },
-//   }
-// })
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   const swiper = new Swiper('.main_visual_swiper', {
-//     loop: true,
-//     autoplay: {
-//       delay: 3000,
-//       disableOnInteraction: false,
-//     },
-//     navigation: {
-//       nextEl: '.swiper-button-next',
-//       prevEl: '.swiper-button-prev',
-//     },
-//     on: {
-//       init: function () {
-//         updateCustomControls(this);
-//       },
-//       slideChange: function () {
-//         updateCustomControls(this);
-//       }
-//     }
-//   });
+// 재생/정지 버튼 클릭 시 자동 슬라이드 멈추기 및 시작하기
+btnPlayStop.addEventListener('click', () => {
+  if (isPlaying) {
+    mainswiper.autoplay.pause(); // 슬라이드 멈추기
+    btnPlayStop.innerHTML = '<i class="ri-play-fill"></i>'; // 아이콘을 play로 변경
+  } else {
+    mainswiper.autoplay.resume(); // 슬라이드 재개
+    btnPlayStop.innerHTML = '<i class="ri-pause-line"></i>'; // 아이콘을 pause로 변경
+  }
+  isPlaying = !isPlaying; // 상태 반전
+});
 
 
-/* 든든스낵이 추천 */
+/* 든든스낵 추천 */
 document.addEventListener("DOMContentLoaded", function () {
   const chatGroups = document.querySelectorAll(".chat_group");
   let currentIndex = 0;
@@ -217,6 +202,27 @@ serviceTabs.forEach(function (tab) {
   });
 });
 
+
+
+/* 무상 설비 */ 
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', (e) => {
+    e.preventDefault(); // 기본 클릭 동작 방지 (링크 이동 방지)
+
+    // 기존에 활성화된 탭과 콘텐츠에서 'active' 클래스 제거
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.cont_list').forEach(content => content.classList.remove('active'));
+
+    // 클릭한 탭에 'active' 클래스 추가
+    tab.classList.add('active');
+
+    // 해당 탭의 콘텐츠에 'active' 클래스 추가
+    const tabId = tab.getAttribute('data-tab');
+    document.getElementById(tabId).classList.add('active');
+  });
+});
+
+
 /* 서비스 재원 */
 document.addEventListener("DOMContentLoaded", () => {
   const tabs = document.querySelectorAll(".service_tab .link");
@@ -264,6 +270,6 @@ const SnsSwiper = new Swiper('.sns_swiper', {
   },
   speed: 9000, //애니메이션 지속시간
   loop: true, //무한반복
-  slidesPerView: '4.5', //화면에 보여질 슬라이드 갯수
+  slidesPerView: '4', //화면에 보여질 슬라이드 갯수
   spaceBetween: 50, //슬라이드 사이 간격
 });

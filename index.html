@@ -44,29 +44,33 @@
       </header>
       
       <main id="main_content">
-         <div class="main_visual_swiper">
+         <div id="mainswiper" class="main_visual_swiper">
             <div class="swiper-wrapper">
                <div class="swiper-slide">
-                  <img src="./img/main_banner01.png" alt="사내 간식 복지 서비스 든든스낵 이미지">
+                  <img class="pc" src="./img/main_banner01.png" alt="사내 간식 복지 서비스 든든스낵 이미지">
                   <!-- <img class="mo" src="./img/main_banner_mo.png" alt="사내 간식 복지 서비스 든든스낵 이미지"> -->
                </div>
                <div class="swiper-slide">
-                  <img src="./img/main_banner02.png" alt="봄 신상 과자 이미지">
+                  <img class="pc" src="./img/main_banner02.png" alt="봄 신상 과자 이미지">
+                  <p>신상품 먼저 맛보기</p>
                </div>
                <div class="swiper-slide">
-                  <img class="pc" src="./img/main_banner02.jpg" alt="사내 간식 복지 서비스 든든스낵 이미지">
+                  <img class="pc" src="./img/main_banner03.png" alt="사내 간식 복지 서비스 든든스낵 이미지">
                </div>
             </div>
             <!-- pagination -->
             <div class="slide_move">
-               <div class="swiper-button-prev"></div>
+               <button class="btn-prev"></button>
                <div class="swiper-pagination"></div>
-               <div class="swiper-button-next"></div>
+               <button class="btn-next"></button>
+               <button class="btn-play-stop">
+                  <i class="ri-pause-line"></i>
+               </button>
             </div>
          </div>
 
          <!-- 추천하는 이유 -->
-         <section class="recommend_wrap">
+         <section id="section01" class="recommend_wrap">
             <div class="txt_con">
                <span>이런 분들께 추천드려요!</span>
                <h2>우리 회사에 딱 맞는 사내 간식 복지 서비스<br>찾고 계신가요?</h2>
@@ -137,7 +141,7 @@
          </section>
 
          <!-- 원스탑 케어 서비스 -->
-         <section class="one_stop_care_service">
+         <section id="section02" class="one_stop_care_service">
             <div class="container">
                <div class="txt_con">
                   <span>사내 간식 서비스는 이제 든든스낵에게 맡기세요!</span>
@@ -345,11 +349,11 @@
             </div>
             <div class="container">
                <div class="tabs">
-                  <a href="#" class="tab">진열대 / 자판기</a>
-                  <a href="#" class="tab">냉장 쇼케이스</a>
+                  <a href="#" class="tab active" data-tab="tab1">진열대 / 자판기</a>
+                  <a href="#" class="tab" data-tab="tab2">냉장 쇼케이스</a>
                </div>
                <div>
-                  <div class="cont_list">
+                  <div id="tab1" class="cont_list active">
                      <ul>
                         <li>
                            <img src="./img/snack_displaystand_L.svg" alt="스낵진열대(대)">
@@ -370,7 +374,7 @@
                         </li>
                      </ul>
                   </div>
-                  <div class="cont_list">
+                  <div id="tab2" class="cont_list">
                      <ul>
                         <li>
                            <img src="./img/refrigerated_showcase_L.svg" alt="냉장 쇼케이스(대)">
@@ -381,12 +385,12 @@
                            <span>냉장 쇼케이스(소)</span>
                         </li>
                         <li>
-                           <img src="./img/freezer.svg" alt="멀티자판기">
+                           <img src="./img/freezer.svg" alt="냉동고">
                            <span>냉동고</span>
                         </li>
                         <li>
-                           <img src="./img/freezer.svg" alt="스낵트레이">
-                           <span>냉동고</span>
+                           <img src="./img/open_showcase.svg" alt="오픈 쇼케이스">
+                           <span>오픈 쇼케이스</span>
                         </li>
                      </ul>
                   </div>

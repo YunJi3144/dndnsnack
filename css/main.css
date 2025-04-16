@@ -8,15 +8,20 @@
    --main-h2: 4rem;
    /* --main-span: 2.5rem; */
 }
+html, body {
+   overflow-x: hidden;
+}
 html {
    font-size: 10px;
    overflow-x: hidden;
+   scroll-behavior: smooth;
 }
 body {
    font-size: 1.6rem;
    color: #222;
    font-family: 'KoPubDotum', 'Noto Sans KR', 'MalgunGothic', 'AppleSDGothic', sans-serif;
 }
+section {}
 
 h2 {
    font-family: "KoPubDotum";
@@ -236,44 +241,101 @@ header .scroll h1 a {
    height: 100%;
    object-fit: cover;
 }
-/* .main_visual_swiper .swiper-pagination {
-   bottom: 50px;
+#mainswiper .slide_move {  
+   display: flex;
+   justify-content: center;
+   gap: 1rem;
+   position: absolute;
+   bottom: 5rem;
+   z-index: 10;
+   width: 100%;
+}
+#mainswiper .swiper-slide p {
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   text-align: center;
+   bottom: 37rem;
+   left: 42.2%;
+   padding: 1.3rem 2.7rem;
+   border-radius: 5rem;
+   gap: 1rem;
+   font-size: 2.5rem;
+   font-weight: 800;
+   font-family: 'S-CoreDream-3Light';
+   color: #6c087a;
+   border: 2px solid #6c087a;
+}
+#mainswiper .swiper-slide p::after {
+   content: '\EA6C';
+   font-family: remixicon;
+   display: flex;
+   align-items: center;
+}
+#mainswiper .swiper-slide p:hover {
+   cursor: pointer;
+   background: #6c087a;
    color: #FFF;
+   transition: all 0.5s ease;
+}
+#mainswiper .swiper-pagination {
+   position: static;
+   width: auto;
    display: flex;
    justify-content: center;
    align-items: center;
-   gap: 10px;
-} */
-.main_visual_swiper .swiper-pagination {
-   z-index: 100;
-   bottom: 5rem;
-   left: 0;
+   gap: 2rem;
+   color: #FFF;
 }
-.main_visual_swiper .swiper-pagination span {
-   width: 1.5rem;
-   height: 1.5rem;
+.swiper-button-prev, .swiper-button-next {
+  color: rgba(0, 0, 0, 0);
 }
-.main_visual_swiper .swiper-pagination-bullet-active {
-   background: var(--main-orange);
-}
-.main_visual_swiper .swiper-button-prev {
-   left: -60px;
-}
-.main_visual_swiper .swiper-button-next {
-   right: -60px;
-}
-.main_visual_swiper .swiper-button-prev::after {
-   content: '\EA64';
-   font-size: 50px;
+#mainswiper .slide_move .btn-next::after {
+   content: "\EA6E";
+   color: #FFF;
    font-family: remixicon;
+   font-size: 3rem;
+   text-shadow: 0 2px 3px rgba(0, 0, 0, .5);
 }
-.main_visual_swiper .swiper-button-next::after {
-   content: '\EA6E';
-   font-size: 50px;
+#mainswiper .slide_move .btn-prev::before {
+   content: "\EA64";
+   color: #FFF;
    font-family: remixicon;
-} 
-.reason_btn {
-   color: silver
+   font-size: 3rem;
+   text-shadow: 0 2px 3px rgba(0, 0, 0, .5);
+}
+#mainswiper .swiper-pagination .num {
+   font-size: 2rem;
+   font-family: 'Pretendard';
+   font-weight: bold;
+   color: #FFF;
+   text-shadow: 0 2px 3px rgba(0, 0, 0, .5);
+}
+#mainswiper .swiper-pagination .progress {
+   width: 15rem;
+   height: 0.4rem;
+   background: #FFF;
+   box-shadow: 0 2px 3px rgba(0, 0, 0, .5);
+}
+#mainswiper .swiper-pagination .bar {
+   width: 0;
+   height: 100%;
+   background: var(--main-purple);
+   animation: slideBar var(--slide-duration) linear;
+}
+#mainswiper .btn-play-stop {
+   font-size: 2.5rem;
+   /* font-weight: bold; */
+   color: #FFF;
+   text-shadow: 0 2px 3px rgba(0, 0, 0, .5);
+}
+.reset .bar {
+   animation-play-state: paused;
+}
+
+@keyframes slideBar {
+   0% {width: 0;}
+   100% {width: 100%;}
 }
 
 @media screen and (max-width: 1280px) {
@@ -895,16 +957,17 @@ header .scroll h1 a {
    gap: 2rem;
 }
 .product .tabs a {
-   width: 185px;
-   height: 53px;
+   width: 18.4rem;
+   height: 6rem;
+   text-align: center;
+   justify-content: center;
    background: #FFF;
+   padding: 1.6rem 2rem;
    border: 2px solid var(--main-purple);
    border-radius: 3.5rem;
-   color: var(--main-purple);
-   padding: 1.6rem 2rem;
    font-size: 2.2rem;
    font-weight: 600;
-   text-align: center;
+   color: var(--main-purple);
 }
 .product .tabs a:hover {
    background: var(--main-purple);
@@ -912,6 +975,10 @@ header .scroll h1 a {
 }
 .product .cont_list {
    margin-top: 4.2rem;
+   display: none; /* 기본적으로 모든 탭 콘텐츠는 숨김 */
+}
+.cont_list.active {
+   display: block; /* 활성화된 탭 콘텐츠만 보이게 */
 }
 .product .cont_list ul {
    /* width: 318px;

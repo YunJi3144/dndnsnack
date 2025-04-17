@@ -50,7 +50,9 @@ section {
    padding: 0 28rem;
 }
 .blind {
-   display: block;width: 1px;height: 1px;
+   display: block;
+   width: 1px;
+   height: 1px;
    overflow: hidden;
 }
 
@@ -950,6 +952,9 @@ header .scroll h1 a {
 
 
 /* 설비 종류 */
+.product {
+   margin: 5rem 0;
+}
 .product .tabs {
    display: flex;
    justify-content: center;
@@ -1200,7 +1205,7 @@ header .scroll h1 a {
 .service_type .container{
    display: flex;
    justify-content: space-between;
-   margin: 5rem 0;
+   margin: 10rem 0;
 }
 .service_type .service_tab_cont {
    display: flex;

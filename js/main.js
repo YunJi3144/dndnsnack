@@ -140,25 +140,76 @@ const reasonSwiper = new Swiper('.reason_swiper', {
 
 
 /* 우리 회사 맞춤 서비스 */ 
-const serviceImg = document.querySelector('#serviceImage');
-const serviceTabs = document.querySelectorAll('.service_cont .tab');
+// const serviceImg = document.querySelector('#serviceImage');
+// const serviceTabs = document.querySelectorAll('.service_cont .tab');
 
-serviceTabs.forEach(function (tab) {
-  tab.addEventListener('click', function () {
-    // 1. 모든 탭 초기화
-    serviceTabs.forEach(function (el) {
-      el.classList.remove('active');
+// serviceTabs.forEach(function (tab) {
+//   tab.addEventListener('click', function () {
+//     // 1. 모든 탭 초기화
+//     serviceTabs.forEach(function (el) {
+//       el.classList.remove('active');
+//     });
+
+//     // 2. 현재 클릭된 탭에 active 추가
+//     this.classList.add('active');
+
+//     // 3. 이미지 변경
+//     const imgSrc = this.getAttribute('data-image');
+//     serviceImg.setAttribute('src', imgSrc);
+//   });
+// });
+
+  const tabs = document.querySelectorAll('.tab');
+  const numbers = document.querySelectorAll('.tab-number .num');
+  const serviceImage = document.getElementById('serviceImage');
+
+  let activeIndex = 0; // 현재 열린 탭 인덱스를 저장하는 변수
+
+  // 숫자 클릭 이벤트
+  numbers.forEach((num, index) => {
+    num.addEventListener('click', () => {
+      handleTabToggle(index);
     });
-
-    // 2. 현재 클릭된 탭에 active 추가
-    this.classList.add('active');
-
-    // 3. 이미지 변경
-    const imgSrc = this.getAttribute('data-image');
-    serviceImg.setAttribute('src', imgSrc);
   });
-});
 
+  // 탭 클릭 이벤트
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => {
+      handleTabToggle(index);
+    });
+  });
+
+  // 탭 토글 함수
+  function handleTabToggle(index) {
+    // 현재 탭이 열려 있는 탭이면 닫기
+    if (index === activeIndex && tabs[index].classList.contains('active')) {
+      tabs[index].classList.remove('active');
+      numbers[index].classList.remove('active');
+      const accordion = tabs[index].querySelector('.accordion-content');
+      if (accordion) accordion.style.display = 'none';
+      activeIndex = -1; // 열린 탭 없음
+      return;
+    }
+
+    // 기존 열려있던 탭 닫기
+    tabs.forEach((tab, i) => {
+      tab.classList.remove('active');
+      const accordion = tab.querySelector('.accordion-content');
+      if (accordion) accordion.style.display = 'none';
+    });
+    numbers.forEach(n => n.classList.remove('active'));
+
+    // 새로운 탭 열기
+    tabs[index].classList.add('active');
+    const accordion = tabs[index].querySelector('.accordion-content');
+    if (accordion) accordion.style.display = 'flex';
+
+    numbers[index].classList.add('active');
+    const newImage = tabs[index].getAttribute('data-image');
+    if (newImage) serviceImage.setAttribute('src', newImage);
+
+    activeIndex = index;
+  }
 
 /* 무상 설비 */ 
 document.querySelectorAll('.tab').forEach(tab => {

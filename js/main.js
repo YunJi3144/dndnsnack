@@ -29,7 +29,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
-
 /* 메인 배너 */
 const btnPlayStop = document.querySelector('.btn-play-stop');
 const swiperElm = document.querySelector('#mainswiper');
@@ -124,37 +123,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-/* 우리 회사 맞춤 서비스 */
-// document.addEventListener("DOMContentLoaded", function () {
-//   const tabs = document.querySelectorAll(".tab");
-//   const serviceImage = document.getElementById("serviceImage");
-
-//   tabs.forEach(tab => {
-//     tab.addEventListener("click", function () {
-//       // 모든 탭 초기화
-//       tabs.forEach(t => {
-//         t.classList.remove("active");
-//         t.querySelector(".accordion-content").style.display = "none";
-//       });
-
-//       // 현재 탭 활성화
-//       this.classList.add("active");
-//       this.querySelector(".accordion-content").style.display = "flex";
-
-//       // 이미지 변경
-//       const imageSrc = this.getAttribute("data-image");
-//       if (imageSrc) {
-//         serviceImage.setAttribute("src", imageSrc);
-//       }
-//     });
-//   });
-
-//   // 페이지 로딩 시 첫 번째 탭 열기
-//   if (tabs.length > 0) {
-//     tabs[0].click();
-//   }
-// });
-
 
 /* reason_swiper */
 const reasonSwiper = new Swiper('.reason_swiper', {
@@ -163,7 +131,7 @@ const reasonSwiper = new Swiper('.reason_swiper', {
   pagination: {
     el: '.swiper-pagination',
   },
-  spaceBetween: 10,
+  spaceBetween: 30,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -172,17 +140,6 @@ const reasonSwiper = new Swiper('.reason_swiper', {
 
 
 /* 우리 회사 맞춤 서비스 */ 
-// const serviceImg = document.querySelector('#serviceImage')
-//   // serviceImg.setAttribute('src', 'img/sec03_tab01.png')
-
-//   const serviceTab = document.querySelectorAll('.service_cont .tab')
-
-//   serviceTab.forEach(function(tab) {
-//     tab.addEventListener('click', function() {
-//       const imgSrc = this.getAttribute('data-image') //
-//       serviceImg.setAttribute('src', imgSrc)
-//     })
-//   });
 const serviceImg = document.querySelector('#serviceImage');
 const serviceTabs = document.querySelectorAll('.service_cont .tab');
 
@@ -201,7 +158,6 @@ serviceTabs.forEach(function (tab) {
     serviceImg.setAttribute('src', imgSrc);
   });
 });
-
 
 
 /* 무상 설비 */ 

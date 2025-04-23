@@ -160,7 +160,7 @@ header h1 a {
    flex-direction: row;
    justify-content: center;
    margin: 2.5rem;
-   font-size: 1.6rem;
+   font-size: 1.8rem;
 }
 #gnb>li>a {
    display: flex;
@@ -243,7 +243,7 @@ header .scroll h1 a {
    height: 100%;
    object-fit: cover;
 }
-#mainswiper .slide_move {  
+/* #mainswiper .slide_move {  
    display: flex;
    justify-content: center;
    gap: 1rem;
@@ -251,7 +251,18 @@ header .scroll h1 a {
    bottom: 5rem;
    z-index: 10;
    width: 100%;
-}
+} */
+#mainswiper .slide_move {
+   position: absolute;   /* static → absolute */
+   bottom: 5rem;          /* 메인 슬라이드 하단에서 5rem 위 */
+   left: 50%;             /* 가로 중앙 기준 */
+   transform: translateX(-50%);  /* 진짜 중앙 정렬 */
+   display: flex;
+   justify-content: center;
+   gap: 1rem;
+   z-index: 10;
+   width: auto; /* 또는 원하는 너비 */
+ }
 #mainswiper .swiper-slide p {
    position: absolute;
    display: flex;
@@ -280,7 +291,7 @@ header .scroll h1 a {
    color: #FFF;
    transition: all 0.5s ease;
 }
-#mainswiper .swiper-pagination {
+/* #mainswiper .swiper-pagination {
    position: static;
    width: auto;
    display: flex;
@@ -288,7 +299,16 @@ header .scroll h1 a {
    align-items: center;
    gap: 2rem;
    color: #FFF;
-}
+} */
+#mainswiper .swiper-pagination {
+   position: relative; /* 아니면 안 써도 됨 */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 2rem;
+   color: #FFF;
+   top: 0.02rem;
+ }
 .swiper-button-prev, .swiper-button-next {
   color: rgba(0, 0, 0, 0);
 }
@@ -349,6 +369,21 @@ header .scroll h1 a {
    [class^="pc"] {display: none;}
    [class^="mo"] {display: block;}
 } */
+@media (max-width: 768px) {
+   #mainswiper .slide_move {
+      bottom: 2rem;
+      gap: 0.8rem;
+   }
+ 
+   #mainswiper .swiper-pagination .num {
+      font-size: 1.5rem;
+   }
+ 
+   #mainswiper .btn-play-stop {
+      font-size: 2rem;
+   }
+}
+
 
 
 /* recommend_wrap */
@@ -801,13 +836,13 @@ header .scroll h1 a {
    gap: 2.3rem;
 }
 .service_kind .tab {
-  /* display: flex; */
-  align-items: center;
-  gap: 2rem;
-  position: relative;
-  cursor: pointer;
-  transition: all 0.3s;
-  position: relative;
+   /* display: flex; */
+   align-items: center;
+   gap: 2rem;
+   position: relative;
+   cursor: pointer;
+   transition: all 0.3s;
+   position: relative;
    overflow: hidden;
 }
 .service_kind .tab-number {
@@ -848,7 +883,6 @@ header .scroll h1 a {
    color: var(--main-orange);
    padding: 4.2rem 4.5rem;
    gap: 1.3rem;
-   transition: all 0.3s;
 }
 .service_kind .tabs .tab-content:hover {
    cursor: pointer;
@@ -872,10 +906,12 @@ header .scroll h1 a {
    padding: 4.2rem 4.5rem;
 }
 .tab.active .accordion-content {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
+   /* display: flex; */
+   opacity: 1;
+   transform: translateY(0);
+   pointer-events: auto;
 }
+
 .service_kind .accordion-content h3{
    font-size: 3.5rem;
    font-weight: 600;

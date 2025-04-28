@@ -159,57 +159,57 @@ const reasonSwiper = new Swiper('.reason_swiper', {
 //   });
 // });
 
-  const tabs = document.querySelectorAll('.tab');
-  const numbers = document.querySelectorAll('.tab-number .num');
-  const serviceImage = document.getElementById('serviceImage');
+const tabs = document.querySelectorAll('.tab');
+const numbers = document.querySelectorAll('.tab-number .num');
+const serviceImage = document.getElementById('serviceImage');
 
-  let activeIndex = 0; // 현재 열린 탭 인덱스를 저장하는 변수
+let activeIndex = 0; // 현재 열린 탭 인덱스를 저장하는 변수
 
-  // 숫자 클릭 이벤트
-  numbers.forEach((num, index) => {
-    num.addEventListener('click', () => {
-      handleTabToggle(index);
-    });
+// 숫자 클릭 이벤트
+numbers.forEach((num, index) => {
+  num.addEventListener('click', () => {
+    handleTabToggle(index);
   });
+});
 
-  // 탭 클릭 이벤트
-  tabs.forEach((tab, index) => {
-    tab.addEventListener('click', () => {
-      handleTabToggle(index);
-    });
+// 탭 클릭 이벤트
+tabs.forEach((tab, index) => {
+  tab.addEventListener('click', () => {
+    handleTabToggle(index);
   });
+});
 
-  // 탭 토글 함수
-  function handleTabToggle(index) {
-    // 현재 탭이 열려 있는 탭이면 닫기
-    if (index === activeIndex && tabs[index].classList.contains('active')) {
-      tabs[index].classList.remove('active');
-      numbers[index].classList.remove('active');
-      const accordion = tabs[index].querySelector('.accordion-content');
-      if (accordion) accordion.style.display = 'none';
-      activeIndex = -1; // 열린 탭 없음
-      return;
-    }
-
-    // 기존 열려있던 탭 닫기
-    tabs.forEach((tab, i) => {
-      tab.classList.remove('active');
-      const accordion = tab.querySelector('.accordion-content');
-      if (accordion) accordion.style.display = 'none';
-    });
-    numbers.forEach(n => n.classList.remove('active'));
-
-    // 새로운 탭 열기
-    tabs[index].classList.add('active');
+// 탭 토글 함수
+function handleTabToggle(index) {
+  // 현재 탭이 열려 있는 탭이면 닫기
+  if (index === activeIndex && tabs[index].classList.contains('active')) {
+    tabs[index].classList.remove('active');
+    numbers[index].classList.remove('active');
     const accordion = tabs[index].querySelector('.accordion-content');
-    if (accordion) accordion.style.display = 'flex';
-
-    numbers[index].classList.add('active');
-    const newImage = tabs[index].getAttribute('data-image');
-    if (newImage) serviceImage.setAttribute('src', newImage);
-
-    activeIndex = index;
+    if (accordion) accordion.style.display = 'none';
+    activeIndex = -1; // 열린 탭 없음
+    return;
   }
+
+  // 기존 열려있던 탭 닫기
+  tabs.forEach((tab, i) => {
+    tab.classList.remove('active');
+    const accordion = tab.querySelector('.accordion-content');
+    if (accordion) accordion.style.display = 'none';
+  });
+  numbers.forEach(n => n.classList.remove('active'));
+
+  // 새로운 탭 열기
+  tabs[index].classList.add('active');
+  const accordion = tabs[index].querySelector('.accordion-content');
+  if (accordion) accordion.style.display = 'flex';
+
+  numbers[index].classList.add('active');
+  const newImage = tabs[index].getAttribute('data-image');
+  if (newImage) serviceImage.setAttribute('src', newImage);
+
+  activeIndex = index;
+}
 
 /* 무상 설비 */ 
 document.querySelectorAll('.tab').forEach(tab => {
@@ -266,6 +266,12 @@ const ReviewSwiper = new Swiper('.review_swiper', {
   loop: true, //무한반복
   slidesPerView: '2.7', //화면에 보여질 슬라이드 갯수
   spaceBetween: 50, //슬라이드 사이 간격
+  breakpoints: {
+    1280: {
+      slidesPerView: '2',
+      spaceBetween: 40,
+    }
+  }
 });
 
 
@@ -278,5 +284,11 @@ const SnsSwiper = new Swiper('.sns_swiper', {
   speed: 9000, //애니메이션 지속시간
   loop: true, //무한반복
   slidesPerView: '4', //화면에 보여질 슬라이드 갯수
-  spaceBetween: 50, //슬라이드 사이 간격
+  spaceBetween: 40, //슬라이드 사이 간격
+  breakpoints: {
+    1280: {
+      slidesPerView: '3.5',
+      spaceBetween: 30,
+    }
+  }
 });

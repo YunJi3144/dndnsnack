@@ -264,11 +264,15 @@ const ReviewSwiper = new Swiper('.review_swiper', {
   },
   speed: 10000, //애니메이션 지속시간
   loop: true, //무한반복
-  slidesPerView: '2.7', //화면에 보여질 슬라이드 갯수
+  slidesPerView: 2.7, //화면에 보여질 슬라이드 갯수
   spaceBetween: 50, //슬라이드 사이 간격
   breakpoints: {
+    1920: {
+      slidesPerView: 2.7,
+      spaceBetween: 50,
+    },
     1280: {
-      slidesPerView: '2',
+      slidesPerView: 2,
       spaceBetween: 40,
     }
   }
@@ -283,11 +287,15 @@ const SnsSwiper = new Swiper('.sns_swiper', {
   },
   speed: 9000, //애니메이션 지속시간
   loop: true, //무한반복
-  slidesPerView: '4', //화면에 보여질 슬라이드 갯수
+  slidesPerView: 4, //화면에 보여질 슬라이드 갯수
   spaceBetween: 40, //슬라이드 사이 간격
   breakpoints: {
+    1920: {
+      slidesPerView: 4,
+      spaceBetween: 40,
+    },
     1280: {
-      slidesPerView: '3.5',
+      slidesPerView: 3.5,
       spaceBetween: 30,
     }
   }

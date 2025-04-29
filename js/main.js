@@ -16,7 +16,6 @@ window.addEventListener("scroll", () => {
   lastScroll = currentScroll;
 });
 
-
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     e.preventDefault();
@@ -274,6 +273,10 @@ const ReviewSwiper = new Swiper('.review_swiper', {
     1280: {
       slidesPerView: 2,
       spaceBetween: 40,
+    },
+    1140: {
+      slidesPerView: 2,
+      spaceBetween: 40,
     }
   }
 });
@@ -296,6 +299,10 @@ const SnsSwiper = new Swiper('.sns_swiper', {
     },
     1280: {
       slidesPerView: 3.5,
+      spaceBetween: 30,
+    },
+    1140: {
+      slidesPerView: 3.2,
       spaceBetween: 30,
     }
   }

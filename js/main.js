@@ -225,8 +225,19 @@ document.querySelectorAll('.tab').forEach(tab => {
     // 해당 탭의 콘텐츠에 'active' 클래스 추가
     const tabId = tab.getAttribute('data-tab');
     document.getElementById(tabId).classList.add('active');
+    firstTab.classList.add('active');
+    firstContent.classList.add('active');
   });
 });
+
+// document.addEventListener('DOMContentLoaded', () => {
+//   const firstTab = document.querySelector('.tab');
+//   const firstContentId = firstTab.getAttribute('data-tab');
+//   const firstContent = document.getElementById(firstContentId);
+
+//   firstTab.classList.add('active');
+//   firstContent.classList.add('active');
+// });
 
 
 /* 서비스 재원 */
@@ -261,7 +272,7 @@ const ReviewSwiper = new Swiper('.review_swiper', {
   autoplay: {
     delay: 0, //다음 애니메이션이 시작 시간과의 간격
   },
-  speed: 10000, //애니메이션 지속시간
+  speed: 9000, //애니메이션 지속시간
   loop: true, //무한반복
   slidesPerView: 2.7, //화면에 보여질 슬라이드 갯수
   spaceBetween: 50, //슬라이드 사이 간격
@@ -288,7 +299,7 @@ const SnsSwiper = new Swiper('.sns_swiper', {
   autoplay: {
     delay: 0, //다음 애니메이션이 시작 시간과의 간격
   },
-  speed: 9000, //애니메이션 지속시간
+  speed: 9990, //애니메이션 지속시간
   loop: true, //무한반복
   slidesPerView: 4, //화면에 보여질 슬라이드 갯수
   spaceBetween: 40, //슬라이드 사이 간격

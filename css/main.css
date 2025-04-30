@@ -200,7 +200,7 @@ header h1 a {
    transform: translateY(-50%);
 }
 .header_util a i {
-   font-size: 3rem;
+   font-size: 3.3rem;
    color: var(--main-orange);
 }
 .header_util a i:hover, .header_util .link_btn:hover {
@@ -567,6 +567,10 @@ header .scroll h1 a {
    
 }
 @media screen and (max-width: 1140px) {
+   .recommend_wrap {
+      max-height: 70%;
+      margin: 0;
+   }
    .recommend_wrap .txt_con {
       margin-bottom: 4rem;
    }
@@ -575,18 +579,18 @@ header .scroll h1 a {
       margin-bottom: 2.5rem;
    }
    .recommend_wrap dl>dt {
-      padding: 0 14.5rem;
+      padding: 0 15rem;
    }
    .recommend_wrap dl>dd {
-      padding: 0 14.5rem;
+      padding: 0 15rem;
    }
    .recommend_wrap dl>dt .chat_box {
       padding: 1.7rem 3.5rem;
-      font-size: 2.1rem;
+      font-size: 2.3rem;
    }
    .recommend_wrap dl>dd .chat_box {
       padding: 2rem 3.5rem;
-      font-size: 2.5rem;
+      font-size: 2.7rem;
    }
    .recommend_wrap dl>dt .circle_cust {
       width: 6.5rem;
@@ -947,6 +951,17 @@ header .scroll h1 a {
    gap: 1.3rem;
    z-index: 1;
 }
+.service_kind .tabs .tab-content i {
+   position: absolute;
+   top: 6rem;
+   left: 40rem;
+   font-size: 4rem;
+   color: #FFF;
+}
+.service_kind .tabs .tab-content i:hover {
+   transition: transform 1s ease;
+   transform: rotate(360deg);
+}
 .service_kind .tabs .tab-content:hover {
    cursor: pointer;
    background: var(--main-orange);
@@ -980,6 +995,13 @@ header .scroll h1 a {
    transform: translateY(0);
    pointer-events: auto;
 }
+.tab.active .accordion-content i {
+   position: absolute;
+   top: 5rem;
+   left: 40rem;
+   font-size: 4rem;
+   color: var(--main-orange);
+}
 
 .service_kind .accordion-content h3{
    font-size: 3.5rem;
@@ -992,7 +1014,6 @@ header .scroll h1 a {
 }
 .accordion-content dl {
    color: #2d2d2d;
-   /* border: 1px solid #000; */
 }
 .accordion-content .service_txt {
    display: flex;
@@ -1006,7 +1027,6 @@ header .scroll h1 a {
    font-weight: 300;
    width: 60%;
    color: #2d2d2d;
-   /* border: 1px solid red; */
 }
 
 @media screen and (max-width: 1600px) {
@@ -1070,7 +1090,6 @@ header .scroll h1 a {
       width: 40%;
    }
    .accordion-content dd {
-      font-weight: 300;
       width: 60%;
       color: #2d2d2d;
    }
@@ -1120,46 +1139,48 @@ header .scroll h1 a {
    }
 }
 @media screen and (max-width: 1140px) {
+   .service_kind .container {
+      margin-top: 7rem;
+   }
    .service_kind .service_img {
       width: 57.4rem;
       height: 40.2rem;
    }
    .service_kind .tabs {
-      width: 40rem;
-      height: 12.7rem;
-      gap: 1.5rem;
+      width: 38rem;
+      height: 22rem;
+      gap: 1.8rem;
    }
    .service_kind .tab-number {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 11rem;
-      position: relative;
+      display: none;
    }
    .service_kind .tab-number::before {
-      left: 2rem;
-      top: 8rem;
-      bottom: 8rem;
-      width: 2px;
+      display: none;
    }
    .service_kind .num {
-      display: flex;
-      width: 4rem;
-      height: 4rem;
-      font-size: 2rem;
+      display: none;
    }
    .service_kind .tabs .tab-content {
-      padding: 3rem 4rem;
-      gap: 1rem;
-   }
-   .service_kind .accordion-content {
-      padding: 4.2rem 4.5rem;
+      padding: 2.8rem 4rem;
    }
    .service_kind .tabs .tab-content h3 {
-      font-size: 2.7rem;
+      font-size: 2.5rem;
    }
    .service_kind .tabs .tab-content p {
+      font-size: 2.2rem;
+   }
+   .service_kind .accordion-content {
+      padding: 3.2rem 3.7rem;
+   }
+   .service_kind .accordion-content h3{
+      font-size: 2.5rem;
+   }
+   .service_kind .accordion-content p{
       font-size: 2rem;
+   }
+   .accordion-content .service_txt {
+      font-size: 1.8rem;
+      margin-top: 2rem;
    }
 }
 
@@ -1300,6 +1321,7 @@ header .scroll h1 a {
 
 /* 서비스 이용 프로세스 */
 .process {
+   height: 95vh;
    background: #F5F3F9;
 }
 .process ol {
@@ -1337,7 +1359,7 @@ header .scroll h1 a {
    justify-content: center;
 }
 .process .link_btn span {
-   margin: 8rem;
+   margin: 7rem;
    padding: 2.5rem;
    font-size: 2.4rem;
    font-weight: 600;
@@ -1354,6 +1376,9 @@ header .scroll h1 a {
    margin-left: 1rem;
 }
 @media screen and (max-width: 1600px) {
+   .process {
+      height: 107vh;
+   }
    .process ol {
       margin-top: 5rem;
    }
@@ -1380,6 +1405,9 @@ header .scroll h1 a {
    }
 }
 @media screen and (max-width: 1280px) {
+   .process {
+      height: 100vh;
+   }
    .process ol img {
       width: 22rem;
       height: 20rem;
@@ -1491,7 +1519,7 @@ header .scroll h1 a {
 .service_type .service_tab {
    display: flex;
    flex-direction: column;
-   font-size: 2rem;
+   font-size: 2.3rem;
    gap: 2rem;
    margin: 5rem 0;
 }
@@ -1764,8 +1792,8 @@ table {
 .partners ul {
    display: grid;
    grid-template-columns: 1fr 1fr 1fr 1fr;
-   gap: 5rem;
-   margin: 9rem;
+   gap: 4rem;
+   margin: 9rem 0;
 }
 .partners ul li {
    border: 1px solid #C1BECC;
@@ -1777,7 +1805,7 @@ table {
    }
    .partners ul {
       gap: 2.3rem;
-      margin: 5rem;
+      margin: 5rem 0;
    }
    .partners ul li {
       padding: 0.5rem 1rem;
@@ -1813,6 +1841,9 @@ table {
    cursor: pointer;
    transform: translateY(-5px);
    transition: transform 0.3s ease;
+   color: #222;
+   transform: scale(1.1);
+   box-shadow: 0 3rem 3rem rgba(0, 0, 0, .2);
 }
 .dndn_sns .btn_box {
    display: flex;
@@ -1936,15 +1967,49 @@ table {
       border-radius: 2rem;
       padding: 5rem 3rem 4rem 4.5rem;
       width: 40rem;
-      color: #fff;
-      box-shadow: 0 1rem 3rem rgba(0,0,0,0.1);
-      transition: transform 0.3s;
    }
    .btn_img {
       align-self: flex-end;
       width: 20rem;
       height: auto;
       margin: 4rem 0 0 0;
+   }
+}
+
+@media screen and (max-width: 1140px) {
+   .btn_con {
+      padding: 20rem 0;
+   }
+   .btn_card {
+      border-radius: 2rem;
+      padding: 5rem 3rem 4rem 4rem;
+      width: 35rem;
+   }
+   .btn_img {
+      width: 20rem;
+      margin: 4rem 0 0 0;
+   }
+   .btn_txt strong {
+      font-size: 2.7rem;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 2rem;
+   }
+   .btn_txt p {
+      font-size: 2.2rem;
+      line-height: 3.2rem;
+      margin-bottom: 2rem;
+   }
+   .link_2 {
+      display: inline-block;
+      padding: 1rem 1.8rem;
+      font-weight: 600;
+      font-size: 1.8rem;
+   }
+   .link_2::after {
+      content: '\EA70';
+      font-family: remixicon;
+      margin-left: 0.5rem;
    }
 }
 
@@ -1960,8 +2025,8 @@ footer .container {
    align-items: flex-start;
 }
 footer .container img {
-   width: 136px;
-   height: 42px;
+   width: 13.6rem;
+   height: 4.2rem;
    justify-content: flex-start;
 }
 footer .container address, .dndn_info p {
@@ -1972,15 +2037,34 @@ footer .container address, .dndn_info p {
 footer .container .footer_sns {
    display: flex;
    font-size: 3rem;
-   color: rgba(255, 2552, 255,.3);
+   color: rgba(255, 255, 255,.3);
    gap: 1.5rem;
 }
-footer .container address::after {
-   content: '';
-   width: 1px;
-   height: 5px;
-   background: #fff;
+footer .container address span {
+   color: rgba(255, 255, 255,.3);
+   margin: 0 0.5rem 0 0.5rem;
 }
-footer .container address:last-child::after {
+footer .container address span:nth-child(4) {
    display: none;
+}
+
+@media screen and (max-width: 1140px) {
+   footer {
+      padding: 9rem 0;
+   }
+   footer .container img {
+      width: 12.6rem;
+      height: 3.2rem;
+   }
+   footer .container address, .dndn_info p {
+      font-size: 1.3rem;
+      line-height: 2.4rem;
+   }
+   footer .container .footer_sns {
+      font-size: 2.3rem;
+      gap: 1rem;
+   }
+   footer .container address span {
+      margin: 0 0.3rem 0 0.3rem;
+   }
 }

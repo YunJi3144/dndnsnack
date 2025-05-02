@@ -203,8 +203,8 @@ header h1 a {
    font-size: 3.3rem;
    color: var(--main-orange);
 }
-.header_util a i:hover, .header_util .link_btn:hover {
-   color: var(--main-purple);
+.header_util a i:hover {
+   color: #A639DB;
 }
 .header_util .link_btn {
    display: inline block;
@@ -214,6 +214,9 @@ header h1 a {
    font-weight: 600;
    color: #FFF;
    background: linear-gradient(100deg, rgba(255,201,26,1) 0%, rgba(255,170,0,1) 100%);
+}
+.header_util .link_btn:hover {
+   background: linear-gradient(100deg, #DB91FF, #A639DB);
 }
 header.scroll {
    background: #FFF;
@@ -614,9 +617,6 @@ header .scroll h1 a {
    height: 90vh;
    background: var(--sub-bg);
 }
-.one_stop_care_service .txt_con {
-   /* margin-top: 3rem; */
-}
 .one_stop_care_service .sercive_box {
    display: flex;
    justify-content: space-between;
@@ -686,12 +686,7 @@ header .scroll h1 a {
       line-height: 3rem;
    }
 }
-@media screen and (max-width: 1164px) {
-   .container {
-      padding: 0 8rem;
-   }
-}
-@media screen and (max-width: 1124px) {
+@media screen and (max-width: 1140px) {
    .one_stop_care_service .service_img {
       padding: 5rem 4.3rem 3rem 5rem;
    }
@@ -723,7 +718,7 @@ header .scroll h1 a {
 }
 .reason_wrap .reason_swiper {
    overflow: hidden;
-   padding: 50px 0;
+   padding: 5rem 0;
 }
 .reason_wrap .swiper-slide {
    display: flex;
@@ -799,6 +794,16 @@ header .scroll h1 a {
    color: silver
 }
 
+@media screen and (max-width: 1600px) {
+   .reason_wrap .bg_purple, .reason_wrap .bg_orange {
+      height: 49rem;
+      padding: 0 5rem;
+   }
+   .reason_wrap .bg_img {
+      width: 35%;
+      height: auto;
+   }
+}
 
 @media screen and (max-width: 1280px) {
    .reason_wrap .bg_purple, .reason_wrap .bg_orange {
@@ -822,7 +827,7 @@ header .scroll h1 a {
 }
 @media screen and (max-width: 1140px) {
    .reason_wrap .bg_purple, .reason_wrap .bg_orange {
-      height: 40rem;
+      height: 43rem;
       padding: 0 5rem;
    }
    .reason_wrap .txt p {
@@ -901,7 +906,6 @@ header .scroll h1 a {
    position: relative;
    cursor: pointer;
    transition: all 0.3s;
-   position: relative;
    overflow: visible;
 }
 .service_kind .tab-number {
@@ -1031,19 +1035,19 @@ header .scroll h1 a {
 
 @media screen and (max-width: 1600px) {
    .service_kind .service_img {
-      width: 55%;
-      height: 55%;
+      width: 57%;
+      height: 57%;
    }
    .service_kind .tabs {
       width: 43rem;
-      height: 12.9rem;
-      gap: 1.7rem
+      height: 10rem;
+      gap: 1.5rem
    }
    .service_kind .tab-number {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 12rem;
+      gap: 11.7rem;
       position: relative;
    }
    .service_kind .tab-number::before {
@@ -1054,23 +1058,31 @@ header .scroll h1 a {
    }
    .service_kind .num {
       display: flex;
-      width: 4rem;
-      height: 4rem;
-      font-size: 2rem;
+      width: 4.5rem;
+      height: 4.5rem;
+      font-size: 2.3rem;
    }
    .service_kind .tabs .tab-content {
-      padding: 3.8rem 4.1rem;
+      padding: 3.8rem 3.8rem;
       gap: 1.3rem;
+   }
+   .service_kind .tabs .tab-content i {
+      top: 5rem;
+      left: 35.5rem;
    }
    .service_kind .tabs .tab-content h3 {
       font-size: 3rem;
    }
    .service_kind .tabs .tab-content p {
-      font-size: 2rem;
+      font-size: 2.5rem;
    }
    .service_kind .accordion-content {
       padding: 5rem 4.1rem;
       font-size: 1.5rem;
+   }
+   .tab.active .accordion-content i {
+      top: 5rem;
+      left: 35.5rem;
    }
    .service_kind .accordion-content h3{
       font-size: 3rem;
@@ -1078,12 +1090,12 @@ header .scroll h1 a {
       color: var(--main-orange);
    }
    .service_kind .accordion-content p{
-      font-size: 2rem;
+      font-size: 2.5rem;
       color: #471D00;
    }
    .accordion-content .service_txt {
       display: flex;
-      font-size: 1.8rem;
+      font-size: 2.2rem;
       margin-top: 2rem;
    }
    .accordion-content dt {
@@ -1095,6 +1107,9 @@ header .scroll h1 a {
    }
 }
 @media screen and (max-width: 1280px) {
+   .service_kind .container {
+      margin-top: 5rem;
+   }
    .service_kind .service_img {
       width: 60.4rem;
       height: 43.2rem;
@@ -1102,7 +1117,7 @@ header .scroll h1 a {
    .service_kind .tabs {
       width: 40rem;
       height: 12.9rem;
-      gap: 1.8rem;
+      gap: 1.4rem;
       border-radius: 2rem;
    }
    .service_kind .tab-number {
@@ -1131,23 +1146,41 @@ header .scroll h1 a {
    .service_kind .accordion-content {
       padding: 4.2rem 4.5rem;
    }
+   .service_kind .tabs .tab-content i {
+      top: 4.5rem;
+      left: 32rem;
+   }
    .service_kind .tabs .tab-content h3 {
       font-size: 3rem;
    }
    .service_kind .tabs .tab-content p {
+      font-size: 2.2rem;
+   }
+   .tab.active .accordion-content i {
+      top: 4rem;
+      left: 32rem;
+   }
+   .service_kind .accordion-content h3{
+      font-size: 2.7rem;
+   }
+   .service_kind .accordion-content p{
+      font-size: 2.2rem;
+   }
+   .accordion-content .service_txt {
       font-size: 2rem;
+      margin-top: 2rem;
    }
 }
-@media screen and (max-width: 1140px) {
+@media all and (min-width: 1130px) and (max-width: 1140px) {
    .service_kind .container {
       margin-top: 7rem;
    }
    .service_kind .service_img {
-      width: 57.4rem;
+      width: 55.4rem;
       height: 40.2rem;
    }
    .service_kind .tabs {
-      width: 38rem;
+      width: 36rem;
       height: 22rem;
       gap: 1.8rem;
    }
@@ -1161,7 +1194,12 @@ header .scroll h1 a {
       display: none;
    }
    .service_kind .tabs .tab-content {
-      padding: 2.8rem 4rem;
+      padding: 2.8rem 3rem;
+   }
+   .service_kind .tabs .tab-content i {
+      top: 4.5rem;
+      left: 29.5rem;
+      font-size: 3rem;
    }
    .service_kind .tabs .tab-content h3 {
       font-size: 2.5rem;
@@ -1171,6 +1209,11 @@ header .scroll h1 a {
    }
    .service_kind .accordion-content {
       padding: 3.2rem 3.7rem;
+   }
+   .tab.active .accordion-content i {
+      top: 4rem;
+      left: 29.5rem;
+      font-size: 3rem;
    }
    .service_kind .accordion-content h3{
       font-size: 2.5rem;
@@ -1406,7 +1449,7 @@ header .scroll h1 a {
 }
 @media screen and (max-width: 1280px) {
    .process {
-      height: 100vh;
+      height: 85vh;
    }
    .process ol img {
       width: 22rem;
@@ -1740,6 +1783,11 @@ table {
    height: 16rem;
    border-radius: 2rem;
 }
+@media screen and (max-width: 1600px) {
+   .review {
+      height: 95vh;
+   }
+}
 
 @media screen and (max-width: 1280px) {
    .review {
@@ -1799,6 +1847,12 @@ table {
    border: 1px solid #C1BECC;
 }
 
+@media screen and (max-width: 1600px) {
+   .partners {
+      height: 120vh;
+   }
+}
+
 @media screen and (max-width: 1280px) {
    .partners {
       margin-top: 1rem;
@@ -1839,10 +1893,9 @@ table {
 }
 .dndn_sns .swiper-wrapper li img:hover {
    cursor: pointer;
-   transform: translateY(-5px);
    transition: transform 0.3s ease;
-   color: #222;
    transform: scale(1.1);
+   color: #222;
    box-shadow: 0 3rem 3rem rgba(0, 0, 0, .2);
 }
 .dndn_sns .btn_box {
@@ -1956,7 +2009,7 @@ table {
    padding: 0 3rem 0 0;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1600px) {
    .btn_con {
       padding: 20rem 0;
    }

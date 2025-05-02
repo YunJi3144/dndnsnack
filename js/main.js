@@ -281,6 +281,10 @@ const ReviewSwiper = new Swiper('.review_swiper', {
       slidesPerView: 2.7,
       spaceBetween: 50,
     },
+    1600: {
+      slidesPerView: 2,
+      spaceBetween: 40,
+    },
     1280: {
       slidesPerView: 2,
       spaceBetween: 40,

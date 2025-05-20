@@ -76,6 +76,8 @@ btnPlayStop.addEventListener('click', () => {
 });
 
 
+
+
 /* 든든스낵 추천 */
 document.addEventListener("DOMContentLoaded", function () {
   const chatGroups = document.querySelectorAll(".chat_group");
@@ -238,6 +240,9 @@ document.querySelectorAll('.tab').forEach(tab => {
 //   firstTab.classList.add('active');
 //   firstContent.classList.add('active');
 // });
+
+
+/* 프로세스 */
 
 
 /* 서비스 재원 */

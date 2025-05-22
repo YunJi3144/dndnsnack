@@ -80,11 +80,13 @@ section {
       font-size: 2rem;
    }
 }
+
 @media screen and (max-width: 1024px) {
    .container {
       padding: 0 7rem;
    }
 }
+
 @media screen and (max-width: 780px) {
    .container {
       padding: 0 5rem;
@@ -100,16 +102,19 @@ section {
 }
 
 @media screen and (max-width: 500px) {
+   .container {
+      padding: 0 4rem;
+   }
    h2 {
-      font-size: 2.3rem;
-      line-height: 3.5rem;
+      font-size: 2.5rem;
+      line-height: 3.7rem;
       margin-top: 1rem;
    }
    .txt_con {
-      margin-top: 3rem;
+      margin-top: 2rem;
    }
    .txt_con span {
-      font-size: 1.8rem;
+      font-size: 2rem;
    }
 }
 
@@ -825,24 +830,37 @@ header .scroll h1 a {
    .one_stop_care_service {
       height: 130vh;
    }
+   .one_stop_care_service .container {
+      padding: 0 4rem;
+   }
    .one_stop_care_service .sercive_box {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      gap: 3rem;
-      margin-top: 6rem;
+      align-items: center;
+      gap: 2rem;
+      margin-top: 3rem;
    }
    .one_stop_care_service .service_img {
       display: flex;
       flex-direction: row;
-      justify-content: center;
-      padding: 5rem 3rem;
+      justify-content: left;
+      padding: 4rem 3rem 4rem 1rem;
       gap: 1rem 0;
-   } 
+   }
+   .one_stop_care_service li .img {
+      align-items: center;
+      width: 40%;
+      margin-left: 3rem;
+      /* background: pink; */
+   }
    .one_stop_care_service li p {
       text-align: left;
-      font-size: 1.7rem;
-      line-height: 2.7rem;
+      align-self: center;
+      font-size: 2rem;
+      line-height: 3rem;
+      margin-left: 2rem;
+      /* background: pink; */
    }
    .one_stop_care_service .sercive_box {
       gap: 2rem;
@@ -866,7 +884,7 @@ header .scroll h1 a {
    display: flex;
    justify-content: center;
    /* height: 100%; */
-   border-radius: 50px;
+   border-radius: 5rem;
    overflow: hidden;
 }
 .reason_wrap .bg_purple, .reason_wrap .bg_orange {
@@ -1016,7 +1034,44 @@ header .scroll h1 a {
       right: -40px;
    }
 }
-@media screen and (max-width: 480px) {}
+@media screen and (max-width: 500px) {
+   .reason_wrap .container {
+      padding: 0 4rem;
+   }
+   .reason_wrap .swiper-slide {
+      border-radius: 4rem;
+   }
+   .reason_wrap .txt {
+      flex-direction: column;
+      text-align: center;
+      gap: 2rem;
+      margin-bottom: 4rem;
+   }
+   .reason_wrap .bg_purple, .reason_wrap .bg_orange {
+      flex-direction: column-reverse;
+      height: 50rem;
+      padding: 0 4rem;
+   }
+   .reason_wrap .txt strong {
+      font-size: 3.3rem;
+      font-weight: 600;
+      line-height: 4.3rem;
+   }
+   .reason_wrap .txt p {
+      font-size: 1.7rem;
+      line-height: 2.5rem;
+   }
+   .reason_wrap .bg_img {
+      padding: 2rem;
+      transform: translateY(5%);
+   }
+   .reason_wrap .swiper-button-prev {
+      left: -40px;
+   }
+   .reason_wrap .swiper-button-next {
+      right: -40px;
+   }
+}
 
 
 /* 우리 회사 맞춤 서비스 */
@@ -1287,11 +1342,11 @@ header .scroll h1 a {
       gap: 1rem;
    }
    .service_kind .accordion-content {
-      padding: 4.2rem 4.5rem;
+      padding: 3.1rem 3.5rem;
    }
    .service_kind .tabs .tab-content i {
       top: 4.5rem;
-      left: 32rem;
+      left: 33rem;
    }
    .service_kind .tabs .tab-content h3 {
       font-size: 3rem;
@@ -1301,7 +1356,7 @@ header .scroll h1 a {
    }
    .tab.active .accordion-content i {
       top: 4rem;
-      left: 32rem;
+      left: 33rem;
    }
    .service_kind .accordion-content h3{
       font-size: 2.7rem;
@@ -1363,6 +1418,70 @@ header .scroll h1 a {
    }
    .service_kind .accordion-content p{
       font-size: 2rem;
+   }
+   .accordion-content .service_txt {
+      font-size: 1.8rem;
+      margin-top: 2rem;
+   }
+}
+@media screen and (max-width: 500px) {
+   .service_kind .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 4rem;
+      background: pink;
+   }
+   .service_kind .service_img {
+      display: none;
+   }
+   .service_kind .tabs {
+      /* width: 36rem;
+      height: 22rem; */
+      gap: 2rem;
+   }
+   .service_kind .tab-number {
+      display: none;
+   }
+   .service_kind .tab-number::before {
+      display: none;
+   }
+   .service_kind .num {
+      display: none;
+   }
+   .service_kind .tabs .tab-content {
+      padding: 3rem 3.2rem;
+   }
+   .service_kind .tabs .tab-content i {
+      top: 4.5rem;
+      left: 33.5rem;
+      font-size: 3rem;
+      color: var(--main-orange);
+      animation: spin 2s linear infinite;
+   }
+   .service_kind .tabs .tab-content i:hover {
+      transition: transform 1s ease;
+      transform: rotate(360deg);
+   }
+   .service_kind .tabs .tab-content h3 {
+      font-size: 2.5rem;
+   }
+   .service_kind .tabs .tab-content p {
+      font-size: 2.2rem;
+   }
+   .service_kind .accordion-content {
+      padding: 3.2rem 3.7rem;
+   }
+   .tab.active .accordion-content i {
+      top: 4rem;
+      left: 33.5rem;
+      font-size: 3rem;
+   }
+   .service_kind .accordion-content h3{
+      font-size: 2.5rem;
+   }
+   .service_kind .accordion-content p{
+      font-size: 2.2rem;
    }
    .accordion-content .service_txt {
       font-size: 1.8rem;

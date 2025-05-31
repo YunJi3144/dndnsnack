@@ -103,10 +103,10 @@ section {
 
 @media screen and (max-width: 500px) {
    .container {
-      padding: 0 4rem;
+      padding: 0 3rem;
    }
    h2 {
-      font-size: 2.5rem;
+      font-size: 2.3rem;
       line-height: 3.7rem;
       margin-top: 1rem;
    }
@@ -114,7 +114,7 @@ section {
       margin-top: 2rem;
    }
    .txt_con span {
-      font-size: 2rem;
+      font-size: 1.7rem;
    }
 }
 
@@ -831,7 +831,7 @@ header .scroll h1 a {
       height: 130vh;
    }
    .one_stop_care_service .container {
-      padding: 0 4rem;
+      padding: 0 3rem;
    }
    .one_stop_care_service .sercive_box {
       display: flex;
@@ -851,14 +851,13 @@ header .scroll h1 a {
    .one_stop_care_service li .img {
       align-items: center;
       width: 40%;
-      margin-left: 3rem;
-      /* background: pink; */
+      margin-left: 2rem;
    }
    .one_stop_care_service li p {
       text-align: left;
       align-self: center;
-      font-size: 2rem;
-      line-height: 3rem;
+      font-size: 1.7rem;
+      line-height: 2.7rem;
       margin-left: 2rem;
       /* background: pink; */
    }
@@ -1049,20 +1048,19 @@ header .scroll h1 a {
    }
    .reason_wrap .bg_purple, .reason_wrap .bg_orange {
       flex-direction: column-reverse;
-      height: 50rem;
-      padding: 0 4rem;
+      height: 48rem;
+      padding: 0 3rem;
    }
    .reason_wrap .txt strong {
-      font-size: 3.3rem;
-      font-weight: 600;
-      line-height: 4.3rem;
+      font-size: 3rem;
+      line-height: 4rem;
    }
    .reason_wrap .txt p {
-      font-size: 1.7rem;
-      line-height: 2.5rem;
+      font-size: 1.5rem;
+      line-height: 2.3rem;
    }
    .reason_wrap .bg_img {
-      padding: 2rem;
+      padding: 3rem;
       transform: translateY(5%);
    }
    .reason_wrap .swiper-button-prev {
@@ -1429,8 +1427,8 @@ header .scroll h1 a {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 0 4rem;
-      background: pink;
+      padding: 0 3rem;
+      /* background: pink; */
    }
    .service_kind .service_img {
       display: none;
@@ -1438,7 +1436,8 @@ header .scroll h1 a {
    .service_kind .tabs {
       /* width: 36rem;
       height: 22rem; */
-      gap: 2rem;
+      gap: 1.3rem;
+      margin-bottom: 15rem;
    }
    .service_kind .tab-number {
       display: none;
@@ -1454,10 +1453,9 @@ header .scroll h1 a {
    }
    .service_kind .tabs .tab-content i {
       top: 4.5rem;
-      left: 33.5rem;
+      left: 32rem;
       font-size: 3rem;
       color: var(--main-orange);
-      animation: spin 2s linear infinite;
    }
    .service_kind .tabs .tab-content i:hover {
       transition: transform 1s ease;
@@ -1474,7 +1472,7 @@ header .scroll h1 a {
    }
    .tab.active .accordion-content i {
       top: 4rem;
-      left: 33.5rem;
+      left: 32rem;
       font-size: 3rem;
    }
    .service_kind .accordion-content h3{
@@ -1623,16 +1621,55 @@ header .scroll h1 a {
    }
 }
 
+@media screen and (max-width: 500px) {
+   .product .container {
+      padding: 0 3rem;
+   }
+   .product .tabs {
+      margin-top: 4rem;
+   }
+   .product .tabs a {
+      width: 40%;
+      font-size: 1.7rem;
+      padding: 1rem 1rem;
+   }
+   .product .cont_list {
+      margin: 4.2rem 0;
+   }
+   .product .cont_list ul {
+      flex-wrap: wrap; /* 줄바꿈 허용 */
+      justify-content: center;
+   }
+   .product .cont_list ul {
+      /* width: 318px;
+      height: 438px; */
+      display: flex;
+      justify-content: space-between;
+   }
+   .product .cont_list ul>li {
+      width: calc(50% - 1em); /* gap 고려해서 2개씩 정렬 */
+   }
+   .product .cont_list ul>li img {
+      display: flex;
+      justify-content: center;
+      padding: 1.5rem 1.5rem 0 1.5rem;
+   }
+   .product .cont_list ul>li span {
+      padding: 1.2rem 0 1.3rem 0;
+      font-size: 1.8rem;
+   }
+}
+
 
 /* 서비스 이용 프로세스 */
 .process {
    height: 95vh;
    background: #F5F3F9;
 }
-.process.lock {
+/* .process.lock {
    overflow: hidden;
    position: relative;
-}
+} */
 .process ol {
    display: flex;
    justify-content: space-between;
@@ -1815,6 +1852,42 @@ header .scroll h1 a {
    .process .step::after {
       display: none;
    } */
+}
+@media screen and (max-width: 500px) {
+   .process .container {
+      padding: 0 3rem;
+   }
+   .process ol {
+      flex-wrap: wrap; /* 줄바꿈 허용 */
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 3rem;
+   }
+   .process ol>li {
+      width: calc(50% - 1em);
+   }
+   .process ol img {
+      padding: 4rem 5rem 0 4rem;
+      /* margin-left: 6.4rem; */
+   }
+   .process ol p {
+      text-align: center;
+      font-size: 1.8rem;
+      line-height: 2.7rem;
+      padding: 1.7rem 2.4rem;
+   }
+   .process .step::after {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 3.5rem;
+   }
+   .process .link_btn span {
+      margin: 6rem;
+      padding: 2rem;
+      font-size: 2rem;
+   }
 }
 
 

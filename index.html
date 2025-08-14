@@ -16,7 +16,6 @@
 
    <!-- JS -->
    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-   <script src="./js/main.js" defer></script>
 </head>
 <body>
    <div class="skip_nav">
@@ -33,11 +32,12 @@
                   <li><a href="#section02">서비스 소개</a></li>
                   <li><a href="#section06">설비 소개</a></li>
                   <li><a href="#section09">이용 후기</a></li>
+                  <li><a href="#" target="_blank">프로모션</a></li>
                </ul>
             </nav>
             <div class="header_util">
                <a href="https://www.instagram.com/dndnsnack/" target="_blank"><i class="ri-instagram-line"></i></a>
-               <a href="#" class="link_btn"><span>문의하기</span></a>
+               <a href="inquiry_form.html" target="_blank" class="link_btn"><span>문의하기</span></a>
             </div>
          </div>
       </header>
@@ -361,20 +361,20 @@
                   <div id="tab1" class="cont_list active">
                      <ul>
                         <li>
-                           <img src="./img/snack_displaystand_L.svg" alt="스낵진열대(대)">
+                           <img src="./img/snack_displaystand_L.svg" data-large="./img/snack_displaystand_L_modal.png" alt="스낵진열대(대)">
                            <span>스낵 진열대(대)</span>
                         </li>
                         <li>
-                           <img src="./img/snack_displaystand_M.svg" alt="스낵진열대(중)">
+                           <img src="./img/snack_displaystand_M.svg" data-large="./img/snack_displaystand_M_modal.png" alt="스낵진열대(중)">
                            <span>스낵 진열대(중)</span>
                         </li>
                         <li>
-                           <img src="./img/snack_tray.svg" alt="스낵트레이">
+                           <img src="./img/snack_tray.svg" data-large="./img/snack_tray_modal.png" alt="스낵트레이">
                            <span>스낵 트레이</span>
                            
                         </li>
                         <li>
-                           <img src="./img/multi_vendingmachine.svg" alt="멀티자판기">
+                           <img src="./img/multi_vendingmachine.svg" data-large="./img/multi_vendingmachine_modal.png" alt="멀티자판기">
                            <span>멀티자판기</span>
                         </li>
                      </ul>
@@ -382,19 +382,19 @@
                   <div id="tab2" class="cont_list">
                      <ul>
                         <li>
-                           <img src="./img/refrigerated_showcase_L.svg" alt="냉장 쇼케이스(대)">
+                           <img src="./img/refrigerated_showcase_L.svg" data-large="./img/refrigerated_showcase_L_modal.png" alt="냉장 쇼케이스(대)">
                            <span>냉장 쇼케이스(대)</span>
                         </li>
                         <li>
-                           <img src="./img/refrigerated_showcase_S.svg" alt="냉장 쇼케이스(소)">
+                           <img src="./img/refrigerated_showcase_S.svg" data-large="./img/refrigerated_showcase_S_modal.png" alt="냉장 쇼케이스(소)">
                            <span>냉장 쇼케이스(소)</span>
                         </li>
                         <li>
-                           <img src="./img/freezer.svg" alt="냉동고">
+                           <img src="./img/freezer.svg" data-large="./img/freezer_modal.png" alt="냉동고">
                            <span>냉동고</span>
                         </li>
                         <li>
-                           <img src="./img/open_showcase.svg" alt="오픈 쇼케이스">
+                           <img src="./img/open_showcase.svg" data-large="./img/open_showcase_modal.png" alt="오픈 쇼케이스">
                            <span>오픈 쇼케이스</span>
                         </li>
                      </ul>
@@ -402,6 +402,12 @@
                </div>
             </div>
          </section>
+
+         <!-- 모달 -->
+         <div class="modal" id="imageModal">
+            <img class="modal-content" id="modalImage" alt="설비 이미지">
+            <span class="close-btn" id="closeImageModal">&times;</span>
+         </div>
 
          <!-- 서비스 프로세스 -->
          <section class="process">
@@ -429,7 +435,7 @@
                   <p class="txt">큐레이션 & 상품공급</p>
                </li>
             </ol>               
-            <a href="#" class="link_btn"><span>상담 받으러 가기</span></a>
+            <a href="inquiry_form.html" target="_blank" class="link_btn"><span>상담 받으러 가기</span></a>
          </section>
 
          <!-- 서비스 재원 -->
@@ -694,7 +700,7 @@
                 <div class="btn_txt">
                   <strong>문의하기</strong>
                   <p>우리 회사 복지의 출발,<br> 지금 시작해보세요!</p>
-                  <a href="#" class="link_2">자세히 보기</a>
+                  <a href="inquiry_form.html" target="_blank" class="link_2">자세히 보기</a>
                 </div>
                 <img src="./img/btn_contact.svg" alt="문의하기 이미지" class="btn_img">
               </div>
@@ -740,5 +746,6 @@
          </div>
       </footer>
    </div>
+   <script src="./js/main.js" defer></script>
 </body>
 </html>

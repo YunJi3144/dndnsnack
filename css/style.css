@@ -1,0 +1,59 @@
+body {
+   font-family: 'KoPubDotum';
+   padding: 2rem;
+   max-width: 600px;
+   margin: auto;
+}
+h2 {
+   text-align: center;
+   margin-bottom: 2rem;
+}
+label {
+   font-weight: 500;
+   display: block;
+   margin-bottom: 0.5rem;
+}
+.empty {
+   opacity: 0%;
+}
+input, select, textarea {
+   width: 100%;
+   margin-bottom: 1rem;
+   padding: 0.6rem 0.8rem;
+   font-size: 1rem;
+   background: #f0eaed;
+   border: none;
+   border-radius: 0.3rem;
+   box-sizing: border-box;
+}
+.checkbox-label {
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   white-space: nowrap;
+}
+/* 체크박스 오른쪽 여백 */
+.checkbox-input {
+   margin-right: 22rem;
+   transform: translateY(50%);
+}
+textarea {
+   height: 7rem;
+   resize: vertical;
+}
+button {
+   background-color: #6B46C1;
+   color: white;
+   font-size: 1rem;
+   padding: 0.7rem;
+   border: none;
+   border-radius: 0.3rem;
+   width: 100%;
+   cursor: pointer;
+}
+button:hover {
+   background-color: rgb(84, 47, 186);
+}
+.required {
+   color: red;
+}

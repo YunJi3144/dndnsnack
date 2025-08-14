@@ -232,6 +232,36 @@ document.querySelectorAll('.tab').forEach(tab => {
   });
 });
 
+// 모달
+document.addEventListener("DOMContentLoaded", function() {
+  const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("modalImage");
+  const closeBtn = document.getElementById("closeImageModal");
+
+  // section06 내 모든 이미지 클릭 이벤트
+  document.querySelectorAll("#section06 img").forEach(function(img) {
+    img.addEventListener("click", function() {
+      const largeSrc = img.getAttribute("data-large") || img.src;
+      modalImg.src = largeSrc;
+      modalImg.alt = img.alt;
+
+      modal.style.display = "flex"; // 클릭 시 모달 열기
+    });
+  });
+
+  // X 버튼 클릭 시 닫기
+  closeBtn.addEventListener("click", function() {
+    modal.style.display = "none";
+  });
+
+  // 배경 클릭 시 닫기
+  modal.addEventListener("click", function(e) {
+    if (e.target === modal) modal.style.display = "none";
+  });
+});
+
+
+
 // document.addEventListener('DOMContentLoaded', () => {
 //   const firstTab = document.querySelector('.tab');
 //   const firstContentId = firstTab.getAttribute('data-tab');

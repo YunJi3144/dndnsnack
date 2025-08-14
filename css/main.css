@@ -280,6 +280,19 @@ header .scroll h1 a {
    object-fit: cover;
    padding-top: 7rem;
 }
+
+/* .main_visual_swiper {
+   width: 100vw;
+   height: calc(100vh - 7rem);
+}
+
+.main_visual_swiper img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   padding: 0;
+} */
+
 .pc {
    display: block;
 }
@@ -1554,6 +1567,46 @@ header .scroll h1 a {
    padding: 3rem 0 3rem 0;
    font-size: 2.5rem;
 }
+
+/* 모달 기본 숨김 */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.3);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* 모달 안 이미지 */
+.modal-content {
+  max-width: 90%;
+  max-height: 80%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  box-shadow: 0 0 2rem rgba(0,0,0,0.3);
+  border-radius: 1.6rem;
+}
+
+/* X 버튼 */
+.close-btn {
+  position: absolute;
+  top: 2rem;
+  right: 3.5rem;
+  font-size: 4rem;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+}
+
+.close-btn:hover {
+  color: #ccc;
+}
+
 
 @media screen and (max-width: 1280px) {
    .product .tabs {

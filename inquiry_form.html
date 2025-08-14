@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <title>든든스낵 서비스 이용 문의</title>
+   <!-- 파비콘 -->
+   <link rel="icon" type="image/svg" href="./img/dndnlogo_color.svg">
+   
+   <!-- 외부 스타일시트 연결 -->
+   <link rel="stylesheet" href="/css/style.css"/>
+</head>
+<body>
+   <h2>든든스낵 서비스 이용 문의</h2>
+   <form action="/submit-form" method="post">
+      <label><span class="required">*</span> 회사명</label>
+      <input type="text" name="company_name" placeholder="회사명을 입력해주세요" required/>
+
+      <label><span class="required">*</span> 담당자 성함</label>
+      <input type="text" name="manager_name" placeholder="성함을 입력해주세요" required/>
+
+      <label><span class="required">*</span> 연락처</label>
+      <input type="text" name="contact" placeholder="' - ' 없이 연락처를 입력해주세요" required/>
+
+      <label><span class="required">*</span> 이메일 주소</label>
+      <input type="email" name="email" placeholder="이메일을 입력해주세요" required/>
+
+      <label><span class="required">*</span> 관심 서비스</label>
+      <select name="service" required>
+         <option value="basic">기본배송 서비스</option>
+         <option value="curation">큐레이션 서비스</option>
+         <option value="custom">맞춤제공 서비스</option>
+      </select>
+
+      <label><span class="required">*</span> 지역</label>
+      <input type="text" name="region" placeholder="ex) 서울시 00구" required/>
+
+      <label><span class="required">*</span> 예산</label>
+      <input type="text" name="budget" placeholder="예상하시는 월간 예산을 적어주세요(원 단위)" required/>
+
+      <label>
+         <span class="required">*</span> 인원수</label>
+      <input type="text" name="headcount" placeholder="ex) 10명 이하" required/>
+
+      <label>
+         <span class="empty">*</span> 요청사항
+      </label>
+      <textarea name="request" placeholder="요청사항을 입력해주세요"></textarea>
+
+      <label class="checkbox-label">
+         <span class="required">*</span> (필수) 개인정보 수집 및 이용 동의
+         <input type="checkbox" required class="checkbox-input" />
+      </label>
+
+      <button type="submit">제출하기</button>
+   </form>
+</body>
+</html>

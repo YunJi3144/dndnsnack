@@ -1,0 +1,242 @@
+@charset "utf-8";
+
+/* common */
+:root {
+   --main-orange: #ffaa00;
+   --main-purple: #60068c;
+   --sub-bg: #F5F3F9;
+}
+html, body {
+   overflow-x: hidden;
+}
+html {
+   font-size: 10px;
+   overflow-x: hidden;
+   scroll-behavior: smooth;
+}
+body {
+   font-size: 1.6rem;
+   color: #222;
+   font-family: 'KoPubDotum', 'Noto Sans KR', 'MalgunGothic', 'AppleSDGothic', sans-serif;
+}
+
+img {
+   width: 100%;
+}
+section {
+   padding: 10rem 0;
+}
+.container {
+   padding: 0 28rem;
+}
+.blind {
+   display: block;
+   width: 1px;
+   height: 1px;
+   overflow: hidden;
+}
+
+@media screen and (max-width: 1280px) {
+   .container {
+      padding: 0 7rem;
+   }
+}
+@media screen and (max-width: 1140px) {
+}
+
+@media screen and (max-width: 1024px) {
+   .container {
+      padding: 0 7rem;
+   }
+}
+
+@media screen and (max-width: 780px) {
+   .container {
+      padding: 0 5rem;
+   }
+}
+
+@media screen and (max-width: 500px) {
+   .container {
+      padding: 0 3rem;
+   }
+}
+
+/* 스킵 네비게이션 */
+.skip_nav a {
+   position: absolute;
+   left: 0;
+   top: -5rem;
+   padding: 1.6rem 2rem;
+   background: var(--main-orange);
+   color: #FFF;
+}
+.skip_nav a:focus {
+   top: 0;
+}
+
+/* Header */
+header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 9000;
+   color: #222;
+   transform: all 0.3s;
+}
+#header {
+   transition: transform 0.3s ease;
+   will-change: transform;
+}
+#header.hide {
+   transform: translateY(-100%);
+}
+header h1 {
+   position: absolute;
+   left: 13rem;
+   top: 50%;
+   transform: translateY(-62%);
+}
+header h1 a {
+   display: block;
+   height: 3.8rem;
+   width: 13.1rem;
+   background: url(../img/dndnlogo_header.svg) no-repeat;
+   background-position: left top;
+   transition: background-position 0.3s;
+}
+#gnb {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+}
+#gnb ul {
+   display: flex;
+   gap: 13rem;
+   flex-direction: row;
+   justify-content: center;
+   margin: 2.5rem;
+   font-size: 1.8rem;
+}
+#gnb>li>a {
+   display: flex;
+   align-items: center;
+}
+#gnb li:hover>a {
+   font-weight: 600;
+   color: var(--main-orange);
+}
+.header_util {
+   display: flex;
+   gap: 2rem;
+   align-items: center;
+   position: absolute;
+   right: 13rem;
+   top: 50%;
+   transform: translateY(-50%);
+}
+.header_util a i {
+   font-size: 3.3rem;
+   color: var(--main-orange);
+}
+.header_util a i:hover {
+   color: #A639DB;
+}
+.header_util .link_btn {
+   display: inline block;
+   font-size: 1.8rem;
+   font-weight: 600;
+   padding: 0.8rem 2rem;
+   font-weight: 600;
+   color: #FFF;
+   background: linear-gradient(100deg, rgba(255,201,26,1) 0%, rgba(255,170,0,1) 100%);
+}
+.header_util .link_btn:hover {
+   background: linear-gradient(100deg, #DB91FF, #A639DB);
+}
+header.scroll {
+   background: #FFF;
+   color: #222;
+   border-bottom: 1px solid #dedede;
+}
+header .scroll h1 a {
+   background-position: 0 bottom;
+}
+
+@media screen and (max-width: 1280px) {
+   #gnb ul {
+      gap: 7rem;
+      margin: 2.5rem;
+      font-size: 1.8rem;
+   }
+   header h1 {
+      left: 7rem;
+   }
+   .header_util {
+      right: 7rem;
+   }
+}
+@media screen and (max-width: 1140px) {
+   #gnb ul {
+      gap: 6rem;
+      margin: 2.5rem;
+      font-size: 1.8rem;
+   }
+}
+@media screen and (max-width: 780px) {
+}
+@media screen and (max-width: 500px) {
+   header .container {
+      padding: 0 2.5rem;
+   }
+   header h1 {
+      left: 2.5rem;
+   }
+   header h1 a {
+      height: 3rem;
+      width: 12.4rem;
+      background-size: 80%;
+   }
+   #gnb li {
+      display: none;
+   }
+   .header_util {
+      gap: 1rem;
+      right: 28rem;
+   }
+   .header_util a i {
+      font-size: 2.8rem;
+   }
+   .header_util .link_btn {
+      font-size: 1.4rem;
+      padding: 0.7rem 1.7rem;
+   }
+   
+}
+
+/* 프로모션 */
+.tabs {
+   display: flex;
+   justify-content: space-around;
+   margin-top: 10rem;
+   font-size: 2.3rem;
+   border-bottom: 1px solid #dedede;
+}
+
+.tab {
+   padding: 3rem 5rem;
+}
+
+.tab:hover {
+   cursor: pointer;
+   font-weight: 600;
+   color: var(--main-purple);
+   border-bottom: 3px solid var(--main-purple);
+}
+.cont_promotion {
+   display: none; /* 기본적으로 숨김 */
+}
+.cont_promotion.active {
+   display: block; /* active만 보이게 */
+}

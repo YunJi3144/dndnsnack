@@ -339,15 +339,6 @@ header .scroll h1 a {
    color: #FFF;
    transition: all 0.5s ease;
 }
-/* #mainswiper .swiper-pagination {
-   position: static;
-   width: auto;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   gap: 2rem;
-   color: #FFF;
-} */
 #mainswiper .swiper-pagination {
    position: relative; /* 아니면 안 써도 됨 */
    display: flex;

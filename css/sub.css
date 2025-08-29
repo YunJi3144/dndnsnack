@@ -228,7 +228,7 @@ header .scroll h1 a {
    padding: 3rem 5rem;
 }
 
-.tab:hover {
+.tab:hover, .tab.active {
    cursor: pointer;
    font-weight: 600;
    color: var(--main-purple);

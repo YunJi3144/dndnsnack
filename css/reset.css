@@ -21,7 +21,8 @@ img, video, iframe {
 input, textarea, select, button {
     outline: none;
     border: none;
-}button {
+}
+button {
     background: none;
     cursor: pointer;
 }

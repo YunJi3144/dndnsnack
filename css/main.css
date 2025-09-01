@@ -310,7 +310,7 @@ header .scroll h1 a {
    z-index: 10;
    width: auto; /* 또는 원하는 너비 */
 }
-#mainswiper .swiper-slide p {
+#mainswiper .swiper-slide a {
    position: absolute;
    display: flex;
    justify-content: center;
@@ -327,7 +327,7 @@ header .scroll h1 a {
    color: #6c087a;
    border: 2px solid #6c087a;
 }
-#mainswiper .swiper-slide p::after {
+#mainswiper .swiper-slide a::after {
    content: '\EA6C';
    font-family: remixicon;
    display: flex;
@@ -1953,6 +1953,12 @@ header .scroll h1 a {
    margin: 5rem 0;
 }
 .service_type .service_tab a:hover {
+   cursor: pointer;
+   color: var(--main-orange);
+   font-weight: 600;
+}
+.service_type .service_tab a:active,
+.service_type .service_tab a.on {
    cursor: pointer;
    color: var(--main-orange);
    font-weight: 600;

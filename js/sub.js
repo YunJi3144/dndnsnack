@@ -1,21 +1,38 @@
 // 프로모션
 document.addEventListener("DOMContentLoaded", function () {
-   const tabs = document.querySelectorAll(".tab"); // 모든 탭 버튼
-   const contents = document.querySelectorAll(".cont_promotion"); // 모든 이미지 영역
+   const tabs = document.querySelectorAll(".tab");
+   const contents = document.querySelectorAll(".cont_promotion");
 
+   // 1️⃣ URL에서 tab 파라미터 읽기
+   const urlParams = new URLSearchParams(window.location.search);
+   const targetTabId = urlParams.get("tab"); // 예: "tab4"
+
+   // 2️⃣ 활성화할 탭 인덱스 찾기 (없으면 첫 번째)
+   let activeIndex = 0;
+   if (targetTabId) {
+      tabs.forEach((tab, index) => {
+         if (tab.dataset.tab === targetTabId) {
+            activeIndex = index;
+         }
+      });
+   }
+
+   // 3️⃣ 초기화 후 활성화
+   tabs.forEach(t => t.classList.remove("active"));
+   contents.forEach(c => c.classList.remove("active"));
+   tabs[activeIndex].classList.add("active");
+   contents[activeIndex].classList.add("active");
+
+   // 4️⃣ 클릭 이벤트
    tabs.forEach(tab => {
       tab.addEventListener("click", function (e) {
-         e.preventDefault(); // a 태그 기본 이동 방지
+         e.preventDefault();
 
-         // 1. 모든 탭/이미지 영역에서 active 제거
          tabs.forEach(t => t.classList.remove("active"));
          contents.forEach(c => c.classList.remove("active"));
 
-         // 2. 클릭한 탭에 active 부여
          this.classList.add("active");
-
-         // 3. data-tab 값과 같은 id를 가진 이미지 영역에 active 부여
-         const targetId = this.getAttribute("data-tab"); // 예: "tab1"
+         const targetId = this.getAttribute("data-tab");
          document.getElementById(targetId).classList.add("active");
       });
    });

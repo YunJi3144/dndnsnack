@@ -223,11 +223,9 @@ header .scroll h1 a {
    font-size: 2.3rem;
    border-bottom: 1px solid #dedede;
 }
-
 .tab {
    padding: 3rem 5rem;
 }
-
 .tab:hover, .tab.active {
    cursor: pointer;
    font-weight: 600;

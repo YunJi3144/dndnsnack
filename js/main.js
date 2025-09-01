@@ -262,16 +262,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-// document.addEventListener('DOMContentLoaded', () => {
-//   const firstTab = document.querySelector('.tab');
-//   const firstContentId = firstTab.getAttribute('data-tab');
-//   const firstContent = document.getElementById(firstContentId);
-
-//   firstTab.classList.add('active');
-//   firstContent.classList.add('active');
-// });
-
-
 /* 프로세스 */
 
 

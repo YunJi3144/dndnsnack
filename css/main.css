@@ -333,7 +333,7 @@ header .scroll h1 a {
    display: flex;
    align-items: center;
 }
-#mainswiper .swiper-slide p:hover {
+#mainswiper .swiper-slide a:hover {
    cursor: pointer;
    background: #6c087a;
    color: #FFF;

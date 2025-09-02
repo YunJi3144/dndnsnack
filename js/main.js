@@ -140,26 +140,7 @@ const reasonSwiper = new Swiper('.reason_swiper', {
 });
 
 
-/* 우리 회사 맞춤 서비스 */ 
-// const serviceImg = document.querySelector('#serviceImage');
-// const serviceTabs = document.querySelectorAll('.service_cont .tab');
-
-// serviceTabs.forEach(function (tab) {
-//   tab.addEventListener('click', function () {
-//     // 1. 모든 탭 초기화
-//     serviceTabs.forEach(function (el) {
-//       el.classList.remove('active');
-//     });
-
-//     // 2. 현재 클릭된 탭에 active 추가
-//     this.classList.add('active');
-
-//     // 3. 이미지 변경
-//     const imgSrc = this.getAttribute('data-image');
-//     serviceImg.setAttribute('src', imgSrc);
-//   });
-// });
-
+/* 우리 회사 맞춤 서비스 */
 const tabs = document.querySelectorAll('.tab');
 const numbers = document.querySelectorAll('.tab-number .num');
 const serviceImage = document.getElementById('serviceImage');
@@ -259,10 +240,6 @@ document.addEventListener("DOMContentLoaded", function() {
     if (e.target === modal) modal.style.display = "none";
   });
 });
-
-
-
-/* 프로세스 */
 
 
 /* 서비스 재원 */

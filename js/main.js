@@ -1,21 +1,21 @@
 /* 팝업창 */
-// 페이지 로드 시 팝업 제어
-window.addEventListener("load", function() {
+window.addEventListener("load", function () {
   const popup = document.getElementById("noticePopup");
   const closeBtn = document.getElementById("popupClose");
 
-  // 이미 확인한 경우 로컬스토리지 체크
-  if (localStorage.getItem("popupClosed") === "true") {
-    popup.style.display = "none";
-    return;
+  // 로컬스토리지에 닫힘 기록이 없으면 무조건 보여주기
+  if (localStorage.getItem("popupClosed") !== "true") {
+    popup.style.display = "flex"; // 강제로 보이게
   }
 
-  // 닫기 버튼 클릭 시 팝업 닫고 기록 남기기
-  closeBtn.addEventListener("click", function() {
+  // 닫기 버튼 클릭 시
+  closeBtn.addEventListener("click", function () {
     popup.style.display = "none";
     localStorage.setItem("popupClosed", "true");
   });
 });
+
+
 
 
 /* Header */ 
@@ -96,8 +96,6 @@ btnPlayStop.addEventListener('click', () => {
 });
 
 
-
-
 /* 든든스낵 추천 */
 document.addEventListener("DOMContentLoaded", function () {
   const chatGroups = document.querySelectorAll(".chat_group");
@@ -118,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const chatArea = document.querySelector(".chat_scroll_area");
 
   chatArea.addEventListener("wheel", function (e) {
-    if (!isLocked) return; // 잠금 해제되면 무시
+    if (!isLocked) return;
 
     e.preventDefault();
 
@@ -142,7 +140,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // 초기엔 스크롤 잠금
   document.body.style.overflowY = "hidden";
 });
-
 
 
 /* reason_swiper */

@@ -1,3 +1,23 @@
+/* 팝업창 */
+// 페이지 로드 시 팝업 제어
+window.addEventListener("load", function() {
+  const popup = document.getElementById("noticePopup");
+  const closeBtn = document.getElementById("popupClose");
+
+  // 이미 확인한 경우 로컬스토리지 체크
+  if (localStorage.getItem("popupClosed") === "true") {
+    popup.style.display = "none";
+    return;
+  }
+
+  // 닫기 버튼 클릭 시 팝업 닫고 기록 남기기
+  closeBtn.addEventListener("click", function() {
+    popup.style.display = "none";
+    localStorage.setItem("popupClosed", "true");
+  });
+});
+
+
 /* Header */ 
 let lastScroll = 0;
 const header = document.querySelector("#header");
@@ -40,7 +60,7 @@ const mainswiper = new Swiper('#mainswiper', {
   },
   loop: true,
   autoplay: {
-    delay: 5000, // 슬라이드가 5초마다 자동으로 변경되도록 설정
+    delay: 4000, // 슬라이드가 5초마다 자동으로 변경되도록 설정
     disableOnInteraction: false // 사용자가 슬라이드 후에도 계속 자동 변경되도록
   },
   pagination: {

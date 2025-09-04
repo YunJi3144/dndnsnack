@@ -132,6 +132,55 @@ section {
 }
 
 
+/* 팝업 오버레이 */
+.popup-overlay {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.4);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   z-index: 9999;
+}
+
+/* 팝업 콘텐츠 */
+.popup-content {
+   padding: 5rem 5rem;
+   border-radius: 2rem;
+   text-align: center;
+   background: #fff;
+   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.popup-content h2 {
+   margin-bottom: 1rem;
+   font-size: 2.5rem;
+   color: #e33b3b;
+}
+.popup-content p {
+   margin-bottom: 4rem;
+   line-height: 1.6;
+   font-size: 2rem;
+}
+.popup-content p strong {
+   font-weight: 600;
+}
+.popup-content button {
+   padding: 1.3rem 3rem;
+   font-size: 2rem;
+   border: none;
+   border-radius: 1rem;
+   color: #fff;
+   background: var(--main-purple);
+   cursor: pointer;
+}
+.popup-content button:hover {
+   background: var(--main-orange);
+}
+
+
 /* Header */
 header {
    position: fixed;
@@ -280,19 +329,6 @@ header .scroll h1 a {
    object-fit: cover;
    padding-top: 7rem;
 }
-
-/* .main_visual_swiper {
-   width: 100vw;
-   height: calc(100vh - 7rem);
-}
-
-.main_visual_swiper img {
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
-   padding: 0;
-} */
-
 .pc {
    display: block;
 }
@@ -300,15 +336,15 @@ header .scroll h1 a {
    display: none;
 }
 #mainswiper .slide_move {
-   position: absolute;   /* static → absolute */
-   bottom: 5rem;          /* 메인 슬라이드 하단에서 5rem 위 */
-   left: 50%;             /* 가로 중앙 기준 */
-   transform: translateX(-50%);  /* 진짜 중앙 정렬 */
+   position: absolute;
+   bottom: 5rem;
+   left: 50%;
+   transform: translateX(-50%);
    display: flex;
    justify-content: center;
    gap: 1rem;
    z-index: 10;
-   width: auto; /* 또는 원하는 너비 */
+   width: auto;
 }
 #mainswiper .swiper-slide a {
    position: absolute;
@@ -340,7 +376,7 @@ header .scroll h1 a {
    transition: all 0.5s ease;
 }
 #mainswiper .swiper-pagination {
-   position: relative; /* 아니면 안 써도 됨 */
+   position: relative;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -1432,14 +1468,11 @@ header .scroll h1 a {
       justify-content: center;
       align-items: center;
       padding: 0 3rem;
-      /* background: pink; */
    }
    .service_kind .service_img {
       display: none;
    }
    .service_kind .tabs {
-      /* width: 36rem;
-      height: 22rem; */
       gap: 1.3rem;
       margin-bottom: 15rem;
    }
@@ -1522,14 +1555,12 @@ header .scroll h1 a {
 }
 .product .cont_list {
    margin-top: 4.2rem;
-   display: none; /* 기본적으로 모든 탭 콘텐츠는 숨김 */
+   display: none;
 }
 .cont_list.active {
-   display: block; /* 활성화된 탭 콘텐츠만 보이게 */
+   display: block;
 }
 .product .cont_list ul {
-   /* width: 318px;
-   height: 438px; */
    display: flex;
    justify-content: space-between;
    gap: 3rem;
@@ -1681,17 +1712,15 @@ header .scroll h1 a {
       margin: 4.2rem 0;
    }
    .product .cont_list ul {
-      flex-wrap: wrap; /* 줄바꿈 허용 */
+      flex-wrap: wrap;
       justify-content: center;
    }
    .product .cont_list ul {
-      /* width: 318px;
-      height: 438px; */
       display: flex;
       justify-content: space-between;
    }
    .product .cont_list ul>li {
-      width: calc(50% - 1em); /* gap 고려해서 2개씩 정렬 */
+      width: calc(50% - 1em);
    }
    .product .cont_list ul>li img {
       display: flex;
@@ -1710,10 +1739,6 @@ header .scroll h1 a {
    height: 95vh;
    background: #F5F3F9;
 }
-/* .process.lock {
-   overflow: hidden;
-   position: relative;
-} */
 .process ol {
    display: flex;
    justify-content: space-between;
@@ -1884,7 +1909,7 @@ header .scroll h1 a {
 }
 
 @media screen and (max-width: 780px) {
-   /* .process ol {
+   .process ol {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 2rem;
@@ -1895,14 +1920,14 @@ header .scroll h1 a {
    }
    .process .step::after {
       display: none;
-   } */
+   }
 }
 @media screen and (max-width: 500px) {
    .process .container {
       padding: 0 3rem;
    }
    .process ol {
-      flex-wrap: wrap; /* 줄바꿈 허용 */
+      flex-wrap: wrap;
       justify-content: center;
       gap: 2rem;
       margin-top: 3rem;
@@ -1912,7 +1937,6 @@ header .scroll h1 a {
    }
    .process ol img {
       padding: 4rem 5rem 0 4rem;
-      /* margin-left: 6.4rem; */
    }
    .process ol p {
       text-align: center;

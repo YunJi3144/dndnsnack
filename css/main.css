@@ -27,9 +27,7 @@ h2 {
    font-weight: 600;
    font-size: var(--main-h2);
    line-height: 5.7rem;
-   /* margin-bottom: 2rem; */
    margin-top: 1.7rem;
-   /* text-align: center; */
 }
 img {
    width: 100%;
@@ -84,37 +82,6 @@ section {
 @media screen and (max-width: 1024px) {
    .container {
       padding: 0 7rem;
-   }
-}
-
-@media screen and (max-width: 780px) {
-   .container {
-      padding: 0 5rem;
-   }
-   h2 {
-      font-size: 3rem;
-      line-height: 4.3rem;
-      margin-top: 1.3rem;
-   }
-   .txt_con span {
-      font-size: 1.8rem;
-   }
-}
-
-@media screen and (max-width: 500px) {
-   .container {
-      padding: 0 3rem;
-   }
-   h2 {
-      font-size: 2.3rem;
-      line-height: 3.7rem;
-      margin-top: 1rem;
-   }
-   .txt_con {
-      margin-top: 2rem;
-   }
-   .txt_con span {
-      font-size: 1.7rem;
    }
 }
 
@@ -290,36 +257,7 @@ header .scroll h1 a {
       font-size: 1.8rem;
    }
 }
-@media screen and (max-width: 780px) {
-}
-@media screen and (max-width: 500px) {
-   header .container {
-      padding: 0 2.5rem;
-   }
-   header h1 {
-      left: 2.5rem;
-   }
-   header h1 a {
-      height: 3rem;
-      width: 12.4rem;
-      background-size: 80%;
-   }
-   #gnb li {
-      display: none;
-   }
-   .header_util {
-      gap: 1rem;
-      right: 28rem;
-   }
-   .header_util a i {
-      font-size: 2.8rem;
-   }
-   .header_util .link_btn {
-      font-size: 1.4rem;
-      padding: 0.7rem 1.7rem;
-   }
-   
-}
+
 
 
 /* Main_visual */
@@ -343,7 +281,7 @@ header .scroll h1 a {
 }
 #mainswiper .slide_move {
    position: absolute;
-   bottom: 5%;
+   bottom: 6%;
    left: 50%;
    transform: translateX(-50%);
    display: flex;
